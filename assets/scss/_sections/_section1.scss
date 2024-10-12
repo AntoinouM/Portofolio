@@ -6,7 +6,7 @@
 
     &__container {
         width: 80%;
-        height: 80%;
+        height: 90%;
 
         @include breakpoint-max-width(lg) {
             height: 95%;
@@ -33,6 +33,10 @@
             "stack education education"
             "stack education education"
             "stack education education";
+
+        @include breakpoint-max-width(xl) {
+            grid-template-rows: 1fr 1.5fr .5fr 1fr .5fr repeat(2, 1fr) 1.5fr;
+        }
 
         @include breakpoint-max-width(lg) {
 
@@ -138,5 +142,13 @@
 
 .bento__education {
     grid-area: education;
+}
+
+.stack__title {
+    margin-bottom: $spacer-3;
+
+    @include breakpoint-max-width(xl) {
+        margin-bottom: $spacer-2;
+    }
 }
 

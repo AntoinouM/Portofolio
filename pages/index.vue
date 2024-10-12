@@ -15,7 +15,7 @@
             console.log(e.detail.message)
             assignJSONToResources(stack, stackResources.value)
         })
-        resourceLoader.manageResources(['Tech_Logos'])
+        resourceLoader.manageResources(['Tech_Logos', 'Pictures'])
     })
 
 </script>
@@ -24,7 +24,7 @@
 
     <div>
         <section class="section bento">
-            <div class="bento__container">
+            <div class="bento__container" v-if="resourcesLoaded" >
                 <div class="bento__grid">
                     <article class="bento__item bento__presentation"></article>
                     <article class="bento__item bento__picture">
@@ -40,7 +40,7 @@
                         <h2 class="title4 name__name">Hello, I am <span class="title2 name_name--strong">ANTOINE MUNERET</span></h2>
                         <img src="/public/Pictures/cosmo.png" alt="astronaut" class="name__image">
                     </article>
-                    <article v-if="resourcesLoaded" class="bento__item bento__stack">
+                    <article class="bento__item bento__stack">
                         <h3 class="title3 stack__title">My stack</h3>
                         <div class="stack__container">
                             <StackItem v-for="resource in stackResources" :key="resource.key" :item="resource" class="stack__item"/>

@@ -13,7 +13,7 @@
         <img :src="item.src" class="stackItem__logo"/>
         <span class="stackItem__tooltip">
             <h3 class="title4 tooltip__name">{{ item.name }}</h3>
-            <p class="body tooltip__experience">{{ item.experience }}</p>
+            <p class="body tooltip__experience">{{ item.description }}</p>
         </span>
     </div>
 </template>
@@ -34,37 +34,43 @@
             height: 100%;
             object-position: center center;
             filter: grayscale(.9);
-            transition: all .5s ease-out;
+            transition: all .3s ease-out;
 
             &:hover {
                 filter: grayscale(0);
+                transform: scale(1.05);
             }
         }
 
         &__tooltip {
             $tooltip-height: 80px;
-            $tooltip-width: 160px;
 
             position: absolute;
-            height: $tooltip-height;
-            width: $tooltip-width;
-            border: $border-width solid $primary;
-            top: $tooltip-height * -1 + $spacer-1 * -1;
+            box-sizing: border-box;
+            height: fit-content;
+            width: fit-content;
+            padding: $spacer-2 $spacer-3;
+            border: $border-width solid $smoke-white;
+            border-radius: $border-radius-lg;
+            top: 0;
             left: 50%;
-            transform: translateX(-50%);
+            transform: translate(-50%, -110%);
             display: none;
             opacity: 0;
             background-color: $grey-90;
-            transition: opacity 1s ease-out;
             z-index: 10;
-            padding: $spacer-2 $spacer-1;
+            transition: all .3s ease-in;
         }
 
         &__logo:hover + .stackItem__tooltip {
             display: block;
             opacity: 1;
-            transition: all 1s ease-out;
         }
+    }
+
+    .tooltip__name {
+        margin-bottom: $spacer-1;
+        color: $primary;
     }
 
 </style>
