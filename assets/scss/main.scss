@@ -4,6 +4,7 @@
 @import 'typography';
 
 // sections
+@import '/assets/scss/_sections/section1';
 
 
 // global styling
@@ -14,4 +15,14 @@
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
+}
+
+.section {
+    background-color: $secondary;
+    color: $smoke-white;
+    padding: $spacer-6 $spacer-8;
+    height: 100vh;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
 }

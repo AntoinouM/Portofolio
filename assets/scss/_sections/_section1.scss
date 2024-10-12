@@ -1,0 +1,78 @@
+.bento {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__container {
+        width: 80%;
+        height: 80%;
+    }
+
+    &__grid {
+        width: 100%;
+        height: 100%;
+
+        /* grid */
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr 1.5fr .5fr 1fr .5fr repeat(3, 1fr);
+        grid-column-gap: $spacer-3;
+        grid-row-gap: $spacer-2;
+
+        grid-template-areas: 
+            "presentation presentation picture"
+            "presentation presentation picture"
+            "position name picture"
+            "position name quote"
+            "stack name quote"
+            "stack education education"
+            "stack education education"
+            "stack education education";
+    }
+
+    &__item {
+        background-color: $grey-90;
+        border-radius: $border-radius-xl;
+        padding: $spacer-2 $spacer-3;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+.bento__presentation {
+    grid-area: presentation;
+}
+
+.bento__picture {
+    grid-area: picture;
+}
+
+.bento__quote {
+    grid-area: quote;
+    background-color: $lapis-blue;
+}
+
+.bento__position {
+    grid-area: position;
+    background-color: $lapis-blue;
+}
+
+.bento__name {
+    grid-area: name;
+
+    & .name_name--strong {
+        font-weight: bold;
+    }
+}
+
+.bento__stack {
+    grid-area: stack;
+}
+
+.bento__education {
+    grid-area: education;
+}
+
