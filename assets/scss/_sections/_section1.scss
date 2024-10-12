@@ -39,6 +39,7 @@
         flex-direction: column;
         justify-content: center;
         text-align: center;
+        overflow: hidden;
     }
 }
 
@@ -48,6 +49,13 @@
 
 .bento__picture {
     grid-area: picture;
+    padding: 0;
+    
+    & img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
 }
 
 .bento__quote {
