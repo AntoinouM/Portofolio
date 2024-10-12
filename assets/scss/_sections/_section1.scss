@@ -121,6 +121,18 @@
     flex-direction: column;
     gap: $spacer-2;
     justify-content: flex-start;
+
+    & .stack {
+        &__container{
+            display: flex;
+            justify-content: center;
+            align-content: flex-start;
+            gap: $spacer-2;
+            flex-wrap: wrap;
+            width: 100%;
+            height: auto;
+        }
+    }
 }
 
 .bento__education {

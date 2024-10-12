@@ -1,5 +1,5 @@
 <script  setup>
-    import stack from '~/public/Tech_Logos/stack.json'
+    import stack from '~/public/Tech_Logos/stack.json';
 
 </script>
 
@@ -25,7 +25,9 @@
                     </article>
                     <article class="bento__item bento__stack">
                         <h3 class="title3 stack__title">My stack</h3>
-                        <div class="stack__container"></div>
+                        <div class="stack__container">
+                            <StackItem v-for="item in Object.entries(stack)" :key="item.src" :item="item" class="stack__item"/>
+                        </div>
                     </article>
                     <article class="bento__item bento__education"></article>
                 </div>

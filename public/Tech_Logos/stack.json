@@ -1,6 +1,74 @@
 {
+    "js": {
+        "src": "/Tech_Logos/js.svg",
+        "experience": "The language I used the most"
+    },
+    "ts": {
+        "src": "/Tech_Logos/ts.svg",
+        "experience": "Starting out"
+    },
+    "C#": {
+        "src": "/Tech_Logos/c.svg",
+        "experience": "A bit rusted"
+    },
+    "java": {
+        "src": "/Tech_Logos/java.svg",
+        "experience": "Beginner"
+    },
+    "kotlin": {
+        "src": "/Tech_Logos/kotlin.svg",
+        "experience": "A bit rusted"
+    },
+    "css": {
+        "src": "/Tech_Logos/css.svg",
+        "experience": "Advanced"
+    },
+    "sass": {
+        "src": "/Tech_Logos/sass.svg",
+        "experience": "Advanced"
+    },
+    "mysql": {
+        "src": "/Tech_Logos/mysql.svg",
+        "experience": "Intermediate"
+    },
+    "html": {
+        "src": "/Tech_Logos/html.svg",
+        "experience": "Expert"
+    },
+    "vue": {
+        "src": "/Tech_Logos/vue.svg",
+        "experience": "My preferred framework"
+    },
+    "nuxt": {
+        "src": "/Tech_Logos/nuxt.svg",
+        "experience": "Advanced"
+    },
+    "node": {
+        "src": "/Tech_Logos/node.svg",
+        "experience": "The basics covered"
+    },
+    "express": {
+        "src": "/Tech_Logos/express.svg",
+        "experience": "Intermediate"
+    },
     "angular": {
-        "src": "/public/Tech_Logos/angular.svg",
-        "experience": ""
+        "src": "/Tech_Logos/angular.svg",
+        "experience": "Doing the first projects"
+    },
+    "figma": {
+        "src": "/Tech_Logos/figma.svg",
+        "experience": "Intermediate"
+    },
+    "github": {
+        "src": "/Tech_Logos/github.svg",
+        "experience": "Regular handling"
+    },
+    "unity": {
+        "src": "/Tech_Logos/unity.svg",
+        "experience": "Beginner"
+    },
+    "photoshop": {
+        "src": "/Tech_Logos/photoshop.svg",
+        "experience": "Intermediate"
     }
 }
