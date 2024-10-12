@@ -1,5 +1,5 @@
 <script  setup>
-    import stack from '~/public/Tech_Logos/stack.json';
+    import stack from '~/utils/data/stack.json';
     import ResourceManager from '~/utils/ResourcesManager/ResourceManager';
     import { assignJSONToResources } from '~/utils/utilsFunctions';
 
