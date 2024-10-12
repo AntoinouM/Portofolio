@@ -10,16 +10,18 @@
         name = props.item[0];
         src = props.item[1].src;
         experience = props.item[1].experience;
+
+        console.log(src)
     })
 
 </script>
 
 <template>
     <div class="stackItem__container">
-        <img :src="src" :alt="name" class="stackItem__logo">
+        <img :src="src" class="stackItem__logo"/>
         <span class="stackItem__tooltip">
-            <h3 class="title4 tooltip__name">{{name}}</h3>
-            <p class="body tooltip__experience"></p>
+            <h3 class="title4 tooltip__name">{{ name }}</h3>
+            <p class="body tooltip__experience">{{ experience }}</p>
         </span>
     </div>
 </template>
@@ -48,8 +50,8 @@
         }
 
         &__tooltip {
-            $tooltip-height: 60px;
-            $tooltip-width: 120px;
+            $tooltip-height: 80px;
+            $tooltip-width: 160px;
 
             position: absolute;
             height: $tooltip-height;
@@ -59,13 +61,16 @@
             left: 50%;
             transform: translateX(-50%);
             display: none;
+            opacity: 0;
             background-color: $grey-90;
-
+            transition: opacity .3s ease-out;
             z-index: 10;
+            padding: $spacer-2 $spacer-1;
         }
 
         &__logo:hover + .stackItem__tooltip {
             display: block;
+            opacity: 1;
         }
     }
 
