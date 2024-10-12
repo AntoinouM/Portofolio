@@ -1,5 +1,18 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  compatibilityDate: '2024-04-03',
-  devtools: { enabled: true }
+  css: ['~/assets/scss/main.scss'],
+  compatibilityDate: '2024-07-02',
+  vite: {
+    css: {
+      preprocessorOptions: {
+        scss: {
+          additionalData: '@use "./assets/scss/_variables.scss" as *;'
+        }
+      }
+    },
+  },
+  router: {
+    options: {
+      scrollBehaviorType: 'smooth'
+    }
+  }
 })
