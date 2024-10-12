@@ -1,6 +1,25 @@
 <script  setup>
     import stack from '~/public/Tech_Logos/stack.json';
-    
+    import ResourceManager from '~/utils/ResourcesManager/ResourceManager';
+    import { assignJSONToResources } from '~/utils/utilsFunctions';
+
+    const resourceLoader = new ResourceManager();
+    const stackResources = ref(null);
+    const resourcesLoaded = ref(false);
+
+    onMounted(() => {
+        // manage resources
+        resourceLoader.addEventListener('end', (e) => {
+            stackResources.value = resourceLoader.getFilteredArray('Tech_Logos');
+            resourcesLoaded.value = true;
+            console.log(e.detail.message)
+            console.log(stackResources.value)
+
+            assignJSONToResources(stack, stackResources.value)
+        })
+        resourceLoader.manageResources(['Tech_Logos'])
+    })
+
 </script>
 
 <template>
