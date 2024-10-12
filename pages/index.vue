@@ -13,8 +13,6 @@
             stackResources.value = resourceLoader.getFilteredArray('Tech_Logos');
             resourcesLoaded.value = true;
             console.log(e.detail.message)
-            console.log(stackResources.value)
-
             assignJSONToResources(stack, stackResources.value)
         })
         resourceLoader.manageResources(['Tech_Logos'])
@@ -42,10 +40,10 @@
                         <h2 class="title4 name__name">Hello, I am <span class="title2 name_name--strong">ANTOINE MUNERET</span></h2>
                         <img src="/public/Pictures/cosmo.png" alt="astronaut" class="name__image">
                     </article>
-                    <article class="bento__item bento__stack">
+                    <article v-if="resourcesLoaded" class="bento__item bento__stack">
                         <h3 class="title3 stack__title">My stack</h3>
                         <div class="stack__container">
-                            <StackItem v-for="item in Object.entries(stack)" :key="item.src" :item="item" class="stack__item"/>
+                            <StackItem v-for="resource in stackResources" :key="resource.key" :item="resource" class="stack__item"/>
                         </div>
                     </article>
                     <article class="bento__item bento__education"></article>

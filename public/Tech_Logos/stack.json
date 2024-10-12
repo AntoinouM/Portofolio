@@ -1,74 +1,74 @@
 {
     "javascript": {
         "src": "/Tech_Logos/js.svg",
-        "experience": "The language I used the most"
+        "description": "The language I used the most"
     },
     "typescript": {
         "src": "/Tech_Logos/ts.svg",
-        "experience": "Starting out"
+        "description": "Starting out"
     },
     "C#": {
         "src": "/Tech_Logos/c.svg",
-        "experience": "A bit rusted"
+        "description": "A bit rusted"
     },
     "java": {
         "src": "/Tech_Logos/java.svg",
-        "experience": "Beginner"
+        "description": "Beginner"
     },
     "kotlin": {
         "src": "/Tech_Logos/kotlin.svg",
-        "experience": "A bit rusted"
+        "description": "A bit rusted"
     },
     "css": {
         "src": "/Tech_Logos/css.svg",
-        "experience": "Advanced"
+        "description": "Advanced"
     },
     "sass": {
         "src": "/Tech_Logos/sass.svg",
-        "experience": "Advanced"
+        "description": "Advanced"
     },
     "mysql": {
         "src": "/Tech_Logos/mysql.svg",
-        "experience": "Intermediate"
+        "description": "Intermediate"
     },
     "html": {
         "src": "/Tech_Logos/html.svg",
-        "experience": "Expert"
+        "description": "Expert"
     },
     "vue": {
         "src": "/Tech_Logos/vue.svg",
-        "experience": "My preferred framework"
+        "description": "My preferred framework"
     },
     "nuxt": {
         "src": "/Tech_Logos/nuxt.svg",
-        "experience": "Advanced"
+        "description": "Advanced"
     },
     "node": {
         "src": "/Tech_Logos/node.svg",
-        "experience": "The basics covered"
+        "description": "The basics covered"
     },
     "express": {
         "src": "/Tech_Logos/express.svg",
-        "experience": "Intermediate"
+        "description": "Intermediate"
     },
     "angular": {
         "src": "/Tech_Logos/angular.svg",
-        "experience": "Doing the first projects"
+        "description": "Doing the first projects"
     },
     "figma": {
         "src": "/Tech_Logos/figma.svg",
-        "experience": "Intermediate"
+        "description": "Intermediate"
     },
     "github": {
         "src": "/Tech_Logos/github.svg",
-        "experience": "Regular handling"
+        "description": "Regular handling"
     },
     "unity": {
         "src": "/Tech_Logos/unity.svg",
-        "experience": "Beginner"
+        "description": "Beginner"
     },
     "photoshop": {
         "src": "/Tech_Logos/photoshop.svg",
-        "experience": "Intermediate"
+        "description": "Intermediate"
     }
 }
