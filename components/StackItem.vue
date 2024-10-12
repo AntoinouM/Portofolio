@@ -10,7 +10,7 @@
 
 <template>
     <div class="stackItem__container">
-        <img :src="item.src" class="stackItem__logo"/>
+        <img :src="item.src" class="stackItem__logo" :class="{invert: item.name === 'express' || item.name === 'github', bright: item.name === 'unity'}"/>
         <span class="stackItem__tooltip">
             <h3 class="title4 tooltip__name">{{ item.name }}</h3>
             <p class="body tooltip__experience">{{ item.description }}</p>
@@ -71,6 +71,22 @@
     .tooltip__name {
         margin-bottom: $spacer-1;
         color: $electric-blue;
+    }
+
+    .invert {
+        filter: invert(100%);
+
+        &:hover {
+            filter: invert(100%);
+        }
+    }
+
+    .bright {
+        filter: brightness(100%) saturate(1.5) invert(100%);
+
+        &:hover {
+            filter: brightness(100%) saturate(2) invert(100%);
+        }
     }
 
 </style>
