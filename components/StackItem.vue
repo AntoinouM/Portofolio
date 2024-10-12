@@ -16,7 +16,7 @@
 
 <template>
     <div class="stackItem__container">
-        <img src="/public/" :alt="name" class="stackItem__logo">
+        <img src="/public/Pictures/climbing.JPG" :alt="name" class="stackItem__logo">
         <span class="stackItem__tooltip">
             <h3 class="title4 tooltip__name">name</h3>
             <p class="body tooltip__experience"></p>

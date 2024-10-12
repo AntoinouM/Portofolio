@@ -11,7 +11,7 @@
                 <div class="bento__grid">
                     <article class="bento__item bento__presentation"></article>
                     <article class="bento__item bento__picture">
-                        <img src="/Pictures/climbing.JPG" alt="man climbing">
+                        <img src="/Pictures/climbing.jpg" alt="man climbing">
                     </article>
                     <article class="bento__item bento__quote">
                         <p class="body">"Whether it’s climbing or coding, I’m all about solving problems, finding the best path, and reaching the goal step by step."</p>
