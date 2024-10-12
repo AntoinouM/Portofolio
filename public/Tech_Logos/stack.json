@@ -1,9 +1,9 @@
 {
-    "js": {
+    "javascript": {
         "src": "/Tech_Logos/js.svg",
         "experience": "The language I used the most"
     },
-    "ts": {
+    "typescript": {
         "src": "/Tech_Logos/ts.svg",
         "experience": "Starting out"
     },

@@ -45,11 +45,11 @@
                 "quote quote picture picture"
                 "name name name name"
                 "name name name name"
-                "position position position stack"
-                "position position position stack"
-                "education education education stack"
-                "education education education stack"
-                "education education education stack";
+                "position position stack stack"
+                "position position stack stack"
+                "education education stack stack"
+                "education education stack stack"
+                "education education stack stack";
         }
     }
 
@@ -121,13 +121,14 @@
     flex-direction: column;
     gap: $spacer-2;
     justify-content: flex-start;
+    overflow: visible;
 
     & .stack {
         &__container{
             display: flex;
             justify-content: center;
             align-content: flex-start;
-            gap: $spacer-2;
+            gap: $spacer-3;
             flex-wrap: wrap;
             width: 100%;
             height: auto;
