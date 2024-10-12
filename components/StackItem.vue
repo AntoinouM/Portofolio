@@ -38,7 +38,7 @@
 
             &:hover {
                 filter: grayscale(0);
-                transform: scale(1.05);
+                transform: scale(1.08);
             }
         }
 
@@ -70,7 +70,7 @@
 
     .tooltip__name {
         margin-bottom: $spacer-1;
-        color: $primary;
+        color: $electric-blue;
     }
 
 </style>
