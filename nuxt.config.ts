@@ -17,6 +17,11 @@ export default defineNuxtConfig({
       scrollBehaviorType: 'smooth'
     }
   },
-
+  runtimeConfig: {
+    public: {
+      baseURL: process.env.BASE_URL,
+      deployURL: process.env.DEPLOY_URL,
+    }
+  },
   modules: ['@nuxt/image']
 })
