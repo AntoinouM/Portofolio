@@ -11,6 +11,10 @@
         @include breakpoint-max-width(lg) {
             height: 95%;
         }
+
+        @include breakpoint-max-width(md) {
+            width: 95%;
+        }
     }
 
     &__grid {
@@ -71,6 +75,39 @@
 
 .bento__presentation {
     grid-area: presentation;
+    display: flex;
+    gap: $spacer-3;
+    flex-direction: column;
+    justify-content: start;
+    padding: $spacer-3 $spacer-4;
+
+    & .presentation__targets {
+        display: flex;
+        gap: $spacer-3;
+    }
+
+    & .presentation__target {
+        text-transform: uppercase;
+        font-size: 1rem;
+        font-weight: bold;
+        opacity: .6;
+        color: $smoke-white;
+
+        &:hover {
+            cursor: pointer;
+            color: $lapis-blue;
+            opacity: 1;
+        }
+    }
+
+    & .presentation__content {
+        font-size: 1.1rem;
+        text-align: justify;
+    }
+
+    & .active {
+        opacity: 1 !important;
+    }
 }
 
 .bento__picture {
@@ -152,3 +189,96 @@
     }
 }
 
+/* ANIMATION */
+.bento {
+
+    &__presentation { 
+        /* xl: left to right */
+        /* md: left to right */
+        transform: translateX(-70px);
+        animation-delay: .1s !important;
+    }
+
+    &__picture { 
+        /* xl: top to bottom */
+        /* md: right to left */
+        transform: translateY(-60px);
+        animation-delay: .25s !important;
+
+        @include breakpoint-max-width(lg) {
+            transform: translateX(70px) translateY(0);
+        }
+    }
+
+    &__quote { 
+        /* xl: top to bottom */
+        /* md: left to right */
+        transform: translateX(90px);        
+        animation-delay: .8s !important;
+
+        @include breakpoint-max-width(lg) {
+            transform: translateX(-70px) translateY(0);
+        }
+    }
+
+    &__education { 
+        /* xl: right to left */
+        /* md: left to right */
+        transform: translateX(70px);
+        animation-delay: .40s !important;
+
+        @include breakpoint-max-width(lg) {
+            transform: translateX(-70px);
+            animation-delay: .55s !important;
+        }
+    }
+
+    &__stack {  
+        /* xl: bottom  to top */
+        /* md: right to left */
+        transform: translateY(60px);
+        animation-delay: .55s !important;
+
+        @include breakpoint-max-width(lg) {
+            transform: translateX(70px) translateY(0);
+            animation-delay: .40s !important;
+        }
+    }
+
+    &__position { 
+        /* xl: bottom  to top */
+        /* md: left to right */
+        transform: translateX(-90px);
+        animation-delay: .8s !important;
+
+        @include breakpoint-max-width(lg) {
+            transform: translateX(-70px) translateY(0);
+        }
+    }
+}
+
+.bento {
+
+    &__presentation,
+    &__picture ,
+    &__quote,
+    &__education ,
+    &__stack,
+    &__position { /* reset transform via animation */
+        opacity: 0;
+        animation: .3s ease-out forwards slideIn;
+
+        @include breakpoint-max-width(md) {
+            transform: translate(0);
+            opacity: 1;
+            animation: none;
+        }
+    }
+}
+
+@keyframes slideIn {
+    to {
+        transform: translate(0);
+        opacity: 1;
+    }
+}

@@ -7,6 +7,18 @@
     const stackResources = ref(null);
     const resourcesLoaded = ref(false);
 
+    const presentationContent = ref(null)
+    const presentation = {
+        target: ['For everyone', 'For recruiters', 'For developers'],
+        content: [
+            "Hey there! I'm a full-stack developer who’s all about coding, crafting clean designs, and bringing beautiful, user-friendly experiences to life. I love turning ideas into sleek, functional, and fun digital creations!",
+            "I'm a full-stack developer with a passion for clean code, intuitive design, and problem-solving, eager to bring my skills to your team to create impactful digital solutions.",
+            "I may not be {highly_technical} yet and while (!Senior) I am a fastLearner and I am me.openToFeedback(). I build this.site from scratch && me.sharpenMySkills on {projects: other}.",
+        ]
+    }
+
+    let activePresentationIndex = ref(0);
+
     onMounted(() => {
         // manage resources
         resourceLoader.addEventListener('end', (e) => {
@@ -26,7 +38,12 @@
         <section class="section bento">
             <div class="bento__container" v-if="resourcesLoaded" >
                 <div class="bento__grid">
-                    <article class="bento__item bento__presentation"></article>
+                    <article class="bento__item bento__presentation">
+                        <ul class="presentation__targets">
+                            <li v-for="(target, index) in presentation.target" :key="`target${index}`" class="presentation__target" :class="{active: activePresentationIndex === index}" @click="activePresentationIndex = index">{{target}}</li>
+                        </ul>
+                        <div ref="presentationContent" class="presentation__content">{{ presentation.content[activePresentationIndex] }}</div>
+                    </article>
                     <article class="bento__item bento__picture">
                         <img src="/Pictures/climbing.jpg" alt="man climbing">
                     </article>
@@ -37,7 +54,7 @@
                         <h3 class="title4 position_text">Full-stack developer & UX enthusiast</h3>
                     </article>
                     <article class="bento__item bento__name">
-                        <h2 class="title4 name__name">Hello, I am <span class="title2 name_name--strong">ANTOINE MUNERET</span></h2>
+                        <h2 class="title4 name__name">Hello, I am <br/><span class="title2 name_name--strong">ANTOINE MUNERET</span></h2>
                         <img src="/public/Pictures/cosmo.png" alt="astronaut" class="name__image">
                     </article>
                     <article class="bento__item bento__stack">

@@ -25,4 +25,12 @@
     max-width: 100%;
     box-sizing: border-box;
     overflow: hidden;
+
+    @include breakpoint-max-width(md) {
+        padding: $spacer-2 $spacer-3;
+    }
+
+    @include breakpoint-max-width(lg) {
+        padding: $spacer-6 $spacer-5;
+    }
 }
