@@ -2,7 +2,8 @@
 
     const props = defineProps({
         sprite: {type: Object, default: null},
-        fps: {type: Number, default: 60}
+        fps: {type: Number, default: 60},
+        animate: {type: Boolean, default: false}
     })
     const canvas = ref(null);
     const initialPosition = {
@@ -39,7 +40,7 @@
         let position = Math.floor(gameFrame / props.fps) % props.sprite.states[0].nbImg;
         frameX = spriteDim.width * position;
         context.drawImage(astronautImage, frameX, frameY, spriteDim.width, spriteDim.height, initialPosition.x, initialPosition.y, spriteDim.width * 0.8, spriteDim.height * 0.2);
-        gameFrame++;
+        props.animate ? gameFrame++ : gameFrame = gameFrame;
         requestAnimationFrame(animate);
     }
 

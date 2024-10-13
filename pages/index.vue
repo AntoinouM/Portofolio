@@ -17,6 +17,7 @@
             "I may not be {highly_technical} yet and while (!Senior) I am a fastLearner and I am me.openToFeedback(). I build this.site from scratch && me.sharpenMySkills on {projects: other}.",
         ]
     }
+    const animate = ref(false);
     const sprite = {
         src: '/Pictures/astroIdle.png',
         states: [
@@ -77,9 +78,10 @@
                     <article class="bento__item bento__position">
                         <h3 class="title4 position_text">Full-stack developer & UX enthusiast</h3>
                     </article>
-                    <article class="bento__item bento__name">
+                    <article class="bento__item bento__name" @mouseenter="animate = true" @mouseleave="animate = false">
                         <h2 class="title4 name__name">Hello, I am <br/><span class="title2 name_name--strong">ANTOINE MUNERET</span></h2>
                         <CanvasComp class="name__canvas"
+                            :animate="animate"
                             :sprite="sprite"
                             :fps="20"
                         />

@@ -225,7 +225,11 @@
     justify-content: space-between;
     align-items: center;
     gap: $spacer-1;
-    border: 1px solid $smoke-white;
+
+    &:hover {
+        cursor: pointer;
+        border: 1px solid $smoke-white;
+    }
 
     & .name__name{
         width: 80%;
@@ -397,7 +401,8 @@
         /* lg: left to right */
         /* md: not displayed */
         transform: translateX(90px);        
-        animation-delay: .8s !important;
+        animation-delay: .4s !important;
+        animation-duration: .6s !important;
 
         @include breakpoint-max-width(lg) {
             transform: translateX(-70px) translateY(0);
@@ -445,7 +450,8 @@
         /* lg: left to right */
         /* md: left to right */
         transform: translateX(-90px);
-        animation-delay: .8s !important;
+        animation-delay: .4s !important;
+        animation-duration: .6s !important;
 
         @include breakpoint-max-width(lg) {
             transform: translateX(-70px) translateY(0);
