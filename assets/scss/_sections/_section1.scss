@@ -335,6 +335,7 @@
             border-radius: 50%;
             width: 60px;
             height: 60px;
+            transition: all .3s ease-in-out;
             -webkit-transition : -webkit-filter 300ms ease-in-out;
 
             @include breakpoint-max-width(lg) {
