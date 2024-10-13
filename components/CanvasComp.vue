@@ -38,7 +38,7 @@
         context.clearRect(0, 0, canvasDim.width, canvasDim.height);
         let position = Math.floor(gameFrame / props.fps) % props.sprite.states[0].nbImg;
         frameX = spriteDim.width * position;
-        context.drawImage(astronautImage, frameX, frameY, spriteDim.width, spriteDim.height, initialPosition.x, initialPosition.y, spriteDim.width * 0.8, spriteDim.height * 0.25);
+        context.drawImage(astronautImage, frameX, frameY, spriteDim.width, spriteDim.height, initialPosition.x, initialPosition.y, spriteDim.width * 0.8, spriteDim.height * 0.2);
         gameFrame++;
         requestAnimationFrame(animate);
     }

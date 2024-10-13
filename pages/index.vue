@@ -8,6 +8,7 @@
     const resourcesLoaded = ref(false);
 
     const presentationContent = ref(null)
+    let activePresentationIndex = ref(0);
     const presentation = {
         target: ['For everyone', 'For recruiters', 'For developers'],
         content: [
@@ -16,8 +17,6 @@
             "I may not be {highly_technical} yet and while (!Senior) I am a fastLearner and I am me.openToFeedback(). I build this.site from scratch && me.sharpenMySkills on {projects: other}.",
         ]
     }
-
-    const canvasAstronaut = ref(null);
     const sprite = {
         src: '/Pictures/astroIdle.png',
         states: [
@@ -40,8 +39,6 @@
         },
         scale: -1,
     }
-
-    let activePresentationIndex = ref(0);
 
     onMounted(() => {
         // manage resources
@@ -84,7 +81,7 @@
                         <h2 class="title4 name__name">Hello, I am <br/><span class="title2 name_name--strong">ANTOINE MUNERET</span></h2>
                         <CanvasComp class="name__canvas"
                             :sprite="sprite"
-                            :fps="15"
+                            :fps="20"
                         />
                     </article>
                     <article class="bento__item bento__stack">
@@ -93,7 +90,18 @@
                             <StackItem v-for="resource in stackResources" :key="resource.key" :item="resource" class="stack__item"/>
                         </div>
                     </article>
-                    <article class="bento__item bento__education"></article>
+                    <article class="bento__item bento__education">
+                        <div class="education__container">
+                            <h3 class="education__title">Education</h3>
+                            <div class="education__content"></div>
+                        </div>
+                        <div class="education__projects">
+                            <h3 class="projects__text">My Projects</h3>
+                            <span class="projects__buffer"></span>
+                            <span class="projects__arrow">
+                            </span>
+                        </div>
+                    </article>
                 </div>
             </div>
         </section>

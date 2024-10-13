@@ -2,7 +2,7 @@
 
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: end;
 
     &__container {
         width: 80%;
@@ -209,6 +209,11 @@
         width: 70px;
         height: 140px;
         transform: scaleX(-1);
+
+        @include breakpoint-max-width(lg) {
+            width: 50px;
+            height: 100px;
+        }
     }
 
     & .name__image {
@@ -241,8 +246,88 @@
 }
 
 .bento__education {
+
     grid-area: education;
+    display: flex;
+    flex-direction: row;
+    gap: $spacer-2;
+    justify-content: space-between;
+    align-items: end;
+    padding: $spacer-3 $spacer-4;
+
+    & .education__container {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        flex-grow: 6;
+
+        & .education__title {
+            text-transform: uppercase;
+            font-size: 1rem;
+            font-weight: bold;
+            text-align: left;
+        }
+    }
+
+    & .education__projects {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: $spacer-1;
+        width: fit-content;
+        transition: all .3s ease-in-out;
+
+        @include breakpoint-max-width(lg) {
+            width: 80px;
+            height: 80px;
+        }
+
+        & .projects__text {
+            text-transform: uppercase;
+            font-size: .8rem;
+            font-weight: lighter;
+            transition: all .3s ease-in-out;
+
+        }
+
+        & .projects__buffer {
+            width: 100%;
+            height: 0;
+            transition: all .3s ease-in-out;
+        }
+
+        & .projects__arrow {
+            background-image: url('/Pictures/down-arrow.svg');
+            background-position: center 45%;
+            background-size: 110%;
+            border: 2px solid $smoke-white;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            -webkit-transition : -webkit-filter 300ms ease-in-out;
+
+            @include breakpoint-max-width(lg) {
+                width: 45px;
+                height: 45px;
+            }
+        }
+    }
 }
+
+.education__projects:hover {
+
+    cursor: pointer;
+
+    & .projects__buffer {
+        height: $spacer-1;
+    }
+
+    & .projects__arrow {
+        filter: invert(1);
+    }
+}
+
 
 .stack__title {
     margin-bottom: $spacer-3;
