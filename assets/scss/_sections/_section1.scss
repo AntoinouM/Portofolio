@@ -6,6 +6,7 @@
 
     &__container {
         width: 80%;
+        max-width: 1000px;
         height: 90%;
 
         @include breakpoint-max-width(lg) {
@@ -119,7 +120,7 @@
     }
 
     & .presentation__content {
-        font-size: 1.1rem;
+        font-size: 1rem;
         text-align: justify;
         flex-grow: 4;
         display: flex;
@@ -178,14 +179,14 @@
         z-index: 11;
         width: fit-content;
         height: fit-content;
-        top: 15%;
+        top: -15%;
         right: -60px;
         transform: rotate(15deg);
         opacity: 0;
         transition: all .3s ease-in;
 
         @include breakpoint-max-width(lg) {
-            top: -20px;
+            top: -40px;
             right: -70px;
         }
 
