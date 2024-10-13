@@ -205,6 +205,12 @@
         }    
     }
 
+    & .name__canvas {
+        width: 70px;
+        height: 140px;
+        transform: scaleX(-1);
+    }
+
     & .name__image {
         height: 70px;
         width: auto;
