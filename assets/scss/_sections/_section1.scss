@@ -113,13 +113,65 @@
 .bento__picture {
     grid-area: picture;
     padding: 0;
+    position: relative;
+    overflow: visible;
     
     & img {
         height: 100%;
         width: 100%;
         object-fit: cover;
         object-position: center 60%;
+        border-radius: $border-radius-xl;
     }
+
+    & .picture__svg {
+        position: absolute;
+        width: 50%;
+        height: 80px;
+        z-index: 10;
+        transform: scaleX(-1) rotate(-90deg);
+        right: -25%;
+        opacity: 0;
+        transition: all .3s ease-in;
+    }
+
+    & .picture__path {
+        stroke: $electric-blue;
+        stroke-width: 1.5;
+        fill: none;
+    }
+
+    &::after {
+        content: 'me';
+        color: $electric-blue;
+        font-size: 2rem;
+        display: block;
+        position: absolute;
+        z-index: 11;
+        width: fit-content;
+        height: fit-content;
+        top: 15%;
+        right: -80px;
+        transform: rotate(15deg);
+        opacity: 0;
+        transition: all .3s ease-in;
+
+        @include breakpoint-max-width(lg) {
+            top: -20%;
+            right: -70px;
+        }
+
+        @include breakpoint-max-width(md) {
+            top: -20%;
+            right: -40px;
+        }
+    }
+}
+
+.bento__picture:hover > .picture__svg,
+.bento__picture:hover::after {
+    opacity: 1; 
+    transition: all 0.3s ease-in;
 }
 
 .bento__quote {
