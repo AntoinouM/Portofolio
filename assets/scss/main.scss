@@ -28,6 +28,7 @@
 
     @include breakpoint-max-width(md) {
         padding: $spacer-2 $spacer-3;
+        height: fit-content;
     }
 
     @include breakpoint-max-width(lg) {

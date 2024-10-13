@@ -59,6 +59,20 @@
                 "education education stack stack"
                 "education education stack stack";
         }
+
+        @include breakpoint-max-width(md) {
+            grid-template-rows: 2.5fr 1.5fr repeat(6, 1fr);
+            grid-template-columns: 1fr;
+            grid-template-areas: 
+                "presentation"
+                "name"
+                "position"
+                "stack"
+                "stack"
+                "stack"
+                "education"
+                "education";
+        }
     }
 
     &__item {
@@ -89,7 +103,7 @@
     & .presentation__target {
         text-transform: uppercase;
         font-size: 1rem;
-        font-weight: bold;
+        font-weight: normal;
         opacity: .6;
         color: $smoke-white;
 
@@ -97,6 +111,10 @@
             cursor: pointer;
             color: $lapis-blue;
             opacity: 1;
+        }
+
+        @include breakpoint-max-width(md) {
+            font-size: 0.85rem;
         }
     }
 
@@ -110,6 +128,7 @@
 
     & .active {
         opacity: 1 !important;
+        font-weight: bold !important;
     }
 }
 
@@ -118,6 +137,11 @@
     padding: 0;
     position: relative;
     overflow: visible;
+    display: block;
+
+    @include breakpoint-max-width(md) {
+        display: none;
+    }
     
     & img {
         height: 100%;
@@ -181,6 +205,11 @@
 .bento__quote {
     grid-area: quote;
     background-color: $lapis-blue;
+    display: block;
+
+    @include breakpoint-max-width(md) {
+        display: none;
+    }
 }
 
 .bento__position {
@@ -260,11 +289,12 @@
         flex-direction: column;
         height: 100%;
         flex-grow: 6;
+        justify-content: space-between;
 
         & .education__title {
             text-transform: uppercase;
             font-size: 1rem;
-            font-weight: bold;
+            font-weight: normal;
             text-align: left;
         }
     }

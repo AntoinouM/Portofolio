@@ -93,7 +93,16 @@
                     <article class="bento__item bento__education">
                         <div class="education__container">
                             <h3 class="education__title">Education</h3>
-                            <div class="education__content"></div>
+                            <EducationCard 
+                                title="Bachelor in Creative Computing"
+                                school="Sept. 2021 - June 2024"
+                                location="Fachhochschule St. Pölten, Austria"
+                            />
+                            <EducationCard 
+                                title="Technical Degree in Sales"
+                                school="Sept. 2009 - June 2011"
+                                location="IUT2 Grenoble, France"
+                            />
                         </div>
                         <div class="education__projects">
                             <h3 class="projects__text">My Projects</h3>
