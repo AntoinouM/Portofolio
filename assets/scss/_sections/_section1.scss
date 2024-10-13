@@ -372,6 +372,7 @@
 
     &__presentation { 
         /* xl: left to right */
+        /* lg: left to right */
         /* md: left to right */
         transform: translateX(-70px);
         animation-delay: .1s !important;
@@ -379,7 +380,8 @@
 
     &__picture { 
         /* xl: top to bottom */
-        /* md: right to left */
+        /* lg: right to left */
+        /* md: not displayed */
         transform: translateY(-60px);
         animation-delay: .25s !important;
 
@@ -390,7 +392,8 @@
 
     &__quote { 
         /* xl: top to bottom */
-        /* md: left to right */
+        /* lg: left to right */
+        /* md: not displayed */
         transform: translateX(90px);        
         animation-delay: .8s !important;
 
@@ -401,6 +404,7 @@
 
     &__education { 
         /* xl: right to left */
+        /* lg: left to right */
         /* md: left to right */
         transform: translateX(70px);
         animation-delay: .40s !important;
@@ -409,10 +413,16 @@
             transform: translateX(-70px);
             animation-delay: .55s !important;
         }
+
+        @include breakpoint-max-width(md) {
+            transform: translateX(0) translateY(60px);
+            animation-delay: .55s !important;
+        }
     }
 
     &__stack {  
         /* xl: bottom  to top */
+        /* lg: right to left */
         /* md: right to left */
         transform: translateY(60px);
         animation-delay: .55s !important;
@@ -421,16 +431,27 @@
             transform: translateX(70px) translateY(0);
             animation-delay: .40s !important;
         }
+
+        @include breakpoint-max-width(md) {
+            transform: translateY(80px);
+            animation-delay: .40s !important;
+        }
     }
 
     &__position { 
         /* xl: bottom  to top */
+        /* lg: left to right */
         /* md: left to right */
         transform: translateX(-90px);
         animation-delay: .8s !important;
 
         @include breakpoint-max-width(lg) {
             transform: translateX(-70px) translateY(0);
+        }
+
+        @include breakpoint-max-width(md) {
+            transform: translateX(70px);
+            animation-delay: .25s !important;
         }
     }
 }
@@ -445,12 +466,6 @@
     &__position { /* reset transform via animation */
         opacity: 0;
         animation: .3s ease-out forwards slideIn;
-
-        @include breakpoint-max-width(md) {
-            transform: translate(0);
-            opacity: 1;
-            animation: none;
-        }
     }
 }
 
