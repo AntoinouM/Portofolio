@@ -148,19 +148,20 @@
         content: 'me';
         color: $electric-blue;
         font-size: 2rem;
+        font-family: 'Bradley Hand', cursive;
         display: block;
         position: absolute;
         z-index: 11;
         width: fit-content;
         height: fit-content;
         top: 15%;
-        right: -80px;
+        right: -60px;
         transform: rotate(15deg);
         opacity: 0;
         transition: all .3s ease-in;
 
         @include breakpoint-max-width(lg) {
-            top: -20%;
+            top: -20px;
             right: -70px;
         }
 
