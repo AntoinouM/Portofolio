@@ -62,17 +62,9 @@
         }
 
         @include breakpoint-max-width(md) {
-            grid-template-rows: 2.5fr 1.5fr repeat(6, 1fr);
-            grid-template-columns: 1fr;
-            grid-template-areas: 
-                "presentation"
-                "name"
-                "position"
-                "stack"
-                "stack"
-                "stack"
-                "education"
-                "education";
+            display: flex;
+            flex-direction: column;
+            gap: $spacer-4;
         }
     }
 
@@ -86,6 +78,10 @@
         text-align: center;
         overflow: hidden;
         place-self: stretch stretch;
+
+        @include breakpoint-max-width(md) {
+            height: fit-content !important;
+        }
     }
 }
 
@@ -140,9 +136,10 @@
     position: relative;
     overflow: visible;
     display: block;
+    height: auto !important;
 
     @include breakpoint-max-width(lg) {
-        height: 200px;
+        height: 200px !important;
     }
 
     @include breakpoint-max-width(md) {
