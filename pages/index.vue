@@ -162,6 +162,7 @@
         <section class="section contact" id="contact">
             <h2 class="title2 contact__title">Let's connect</h2>
             <div class="contact__container">
+                <div class="title4 contact__name">Antoine Muneret</div>
                 <div class="contact__photo"></div>
                 <div class="contact__location">
                     <img src="/Pictures/location.svg" alt="location" class="location__picto">

@@ -7,9 +7,9 @@
 <template>
     <div class="navbar__container">
         <div class="links__container" :class="{opened: navbarOpened}">
-            <NuxtLink class="navbar__link" :to="{ path: '/', hash: '#bento'}">Home</NuxtLink>
-            <NuxtLink class="navbar__link" :to="{ path: '/', hash: '#projects'}">Projects</NuxtLink>
-            <NuxtLink class="navbar__link" :to="{ path: '/', hash: '#contact'}">Contact</NuxtLink>
+            <NuxtLink @click="navbarOpened = false" class="navbar__link" :to="{ path: '/', hash: '#bento'}">Home</NuxtLink>
+            <NuxtLink @click="navbarOpened = false" class="navbar__link" :to="{ path: '/', hash: '#projects'}">Projects</NuxtLink>
+            <NuxtLink @click="navbarOpened = false" class="navbar__link" :to="{ path: '/', hash: '#contact'}">Contact</NuxtLink>
         </div>
         <div class="navbar__btn" :class="{isRounded: navbarOpened}" @click="navbarOpened = !navbarOpened"></div>
     </div>
@@ -22,11 +22,14 @@
     .opened {
         transform: scaleX(1) !important;
         border-radius: $border-radius-lg 0 0 $border-radius-lg !important;
+        border: $border-width solid $smoke-white;
     }
 
     .isRounded {
-        border-radius: 0 $border-radius-lg $border-radius-lg 0 !important;
+        border-radius: $border-radius-lg $border-radius-lg 0 0 !important;
         border: $border-width solid $smoke-white;
+        transform: rotate(90deg) !important;
+        transition: transform .3s ease-out;
     }
     
     .navbar__container {
@@ -39,6 +42,7 @@
         z-index: 100;
         padding-right: $spacer-10;
         padding-top: $spacer-2;
+        transition: transform .3s ease-out;
 
         & .navbar__btn {
             height: $navbar-height;
@@ -49,6 +53,8 @@
             background-position: center center;
             background-size: 70%;
             background-repeat: no-repeat;
+            transform: rotate(0);
+            transition: transform .3s ease-out;
 
             &:hover {
                 cursor: pointer;
@@ -59,6 +65,7 @@
             display: flex;
             flex-direction: row;
             gap: $spacer-4;
+            height: $navbar-height;
             padding: $spacer-3 $spacer-4;
             z-index: 100;
             background-color: $grey-90;
