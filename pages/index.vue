@@ -87,7 +87,7 @@
                         />
                     </article>
                     <article class="bento__item bento__stack">
-                        <h3 class="title3 stack__title">My stack</h3>
+                        <h3 class="title4 stack__title">My stack</h3>
                         <div class="stack__container">
                             <StackItem v-for="resource in stackResources" :key="resource.key" :item="resource" class="stack__item"/>
                         </div>
@@ -115,8 +115,10 @@
                 </div>
             </div>
         </section>
-        <section class="section projects" id="projects">
-            
+        <section class="section projects" id="projects" v-if="resourcesLoaded" >
+            <div class="projects__container">
+
+            </div>
         </section>
     </div>
     
