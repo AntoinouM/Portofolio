@@ -12,9 +12,9 @@
     const presentation = {
         target: ['For everyone', 'For recruiters', 'For developers'],
         content: [
-            "Hey there! I'm a full-stack developer who’s all about coding, crafting clean designs, and bringing beautiful, user-friendly experiences to life. I love turning ideas into sleek, functional, and fun digital creations!",
-            "I'm a full-stack developer with a passion for clean code, intuitive design, and problem-solving, eager to bring my skills to your team to create impactful digital solutions.",
-            "I may not be {highly_technical} yet and while (!Senior) I am a fastLearner and I am me.openToFeedback(). I build this.site from scratch && me.sharpenMySkills on {projects: other}.",
+            "Hey there! I'm a full-stack developer. I love coding as much as I love climbing so if you don't see me attached to a rope I might be attached to my keyboard.",
+            "I'm a full-stack developer. I understand Component Based Architecture. I have an eye for UI/UX design and Data Visualization. And I am also a kind guy.",
+            "I may not be {highly_technical} yet and while (!Senior) I am a fastLearner and me.openToFeedback(). I build this.site from scratch.init && me.sharpenMySkills() on {projects: other}.",
         ]
     }
     const animate = ref(false);
