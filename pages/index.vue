@@ -8,7 +8,7 @@
     const resourcesLoaded = ref(false);
 
     const presentationContent = ref(null)
-    let activePresentationIndex = ref(0);
+    let activePresentationIndex = ref(1);
     const presentation = {
         target: ['For everyone', 'For recruiters', 'For developers'],
         content: [

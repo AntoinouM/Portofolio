@@ -23,14 +23,14 @@
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-            if (entry.isIntersecting && entry.intersectionRatio >= 0.3) {
+            if (entry.isIntersecting && entry.intersectionRatio >= 0.25) {
             entry.target.classList.add('fade-in');
-          } else if (!entry.isIntersecting || entry.intersectionRatio < 0.4) {
+          } else if (!entry.isIntersecting || entry.intersectionRatio < 0.3) {
             entry.target.classList.remove('fade-in');
           }
         });
       },
-      { threshold: 0.4, }
+      { threshold: 0.25, }
     );
 
     onMounted(() => {
@@ -127,9 +127,9 @@
             grid-area: picture;
             padding: 0 !important;
             position: relative;
+            overflow: visible !important;
 
             &:hover {
-                overflow: visible;
 
                 & > img {
                     position: absolute;
@@ -137,7 +137,6 @@
                     left: 0;
                     height: calc($container-height + 20px);
                     width: v-bind(computedImageWidth);
-                    z-index: 10;
                 }
 
                 & > img.fromRight {
@@ -148,14 +147,21 @@
             }
 
             & img {
+                position: relative;
                 height: 100%;
                 width: 100%;
                 object-fit: cover;
                 object-position: left center;
                 border-radius: $border-radius-xl;
                 transition: all .3s ease-out;
+                z-index: 11;
             }
         }
+
+            & img.fromRight {
+                transform: translateX(0);
+            }
+
 
         &__description {
             grid-area: description;
