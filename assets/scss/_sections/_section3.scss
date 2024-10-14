@@ -3,6 +3,10 @@
     flex-direction: column;
     justify-content: start;
     align-items: center;
+
+    @include breakpoint-max-width(lg) {
+        height: fit-content !important;
+    }
 }
 
 .contact__title {

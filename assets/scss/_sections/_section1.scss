@@ -4,13 +4,18 @@
     justify-content: center;
     align-items: start;
 
+    @include breakpoint-max-width(lg) {
+        height: 95dvh !important;
+        align-items: center;
+    }
+
     &__container {
         width: 80%;
         max-width: 1000px;
         height: 90%;
 
         @include breakpoint-max-width(lg) {
-            height: 95%;
+            height: 85%;
         }
 
         @include breakpoint-max-width(md) {
@@ -45,20 +50,15 @@
 
         @include breakpoint-max-width(lg) {
 
-            grid-template-rows: 1fr 1.5fr 1fr 1fr .5fr repeat(6, 1fr);
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: 1fr 0.5fr 1fr .5fr 1.5fr;
+            grid-template-columns: repeat(2, 1fr);
+            row-gap: $spacer-4;
             grid-template-areas: 
-                "presentation presentation presentation presentation"
-                "presentation presentation presentation presentation"
-                "quote quote picture picture"
-                "quote quote picture picture"
-                "name name name name"
-                "name name name name"
-                "position position stack stack"
-                "position position stack stack"
-                "education education stack stack"
-                "education education stack stack"
-                "education education stack stack";
+                "presentation  presentation"
+                "quote picture"
+                "name name"
+                "position stack"
+                "education stack";
         }
 
         @include breakpoint-max-width(md) {
@@ -85,6 +85,7 @@
         justify-content: center;
         text-align: center;
         overflow: hidden;
+        place-self: stretch stretch;
     }
 }
 
@@ -140,6 +141,10 @@
     overflow: visible;
     display: block;
 
+    @include breakpoint-max-width(lg) {
+        height: 200px;
+    }
+
     @include breakpoint-max-width(md) {
         display: none;
     }
@@ -161,6 +166,11 @@
         right: -25%;
         opacity: 0;
         transition: all .3s ease-in;
+        display: block;
+
+        @include breakpoint-max-width(lg) {
+            display: none;
+        }
     }
 
     & .picture__path {
