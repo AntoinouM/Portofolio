@@ -9,7 +9,7 @@
     const allowLink = ref(true);
 
     onMounted(() => {
-        allowLink.value = props.link.substring(0, 5) === 'https';
+        allowLink.value = props.link.substring(0, 5) === 'https' || 'mailt';
     })
 
 </script>

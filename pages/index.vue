@@ -41,6 +41,13 @@
         scale: -1,
     }
 
+    function downloadPdf() {
+        const link = document.createElement('a');
+            link.href = '/Resume.pdf';
+            link.download = 'resume_antoine_muneret(must hire).pdf';
+            link.click();
+    }
+
     onMounted(() => {
         // manage resources
         resourceLoader.addEventListener('end', (e) => {
@@ -159,17 +166,25 @@
                     <img src="/public/Pictures/location.svg" alt="location" class="location__picto">
                     <p class="location__text">Vienna, Austria</p>
                 </div>
-                <div class="contact__socials">
-                    <LinkComp class="social socials_github"
-                        src="/Tech_Logos/github.svg"
-                        name="github"
-                        link="https://github.com/AntoinouM"
-                    />
-                    <LinkComp class="social socials_linkedin"
-                        src="/Tech_Logos/linkedin.svg"
-                        name="github"
-                        link="https://www.linkedin.com/in/antoine-muneret-5b81b9123/"
-                    />
+                <div class="socials__container">
+                    <div class="contact__socials">
+                        <LinkComp class="social socials_github"
+                            src="/Tech_Logos/github.svg"
+                            name="github"
+                            link="https://github.com/AntoinouM"
+                        />
+                        <LinkComp class="social socials_linkedin"
+                            src="/Pictures/linkedin.svg"
+                            name="linkedin"
+                            link="https://www.linkedin.com/in/antoine-muneret-5b81b9123/"
+                        />
+                        <LinkComp class="social socials_email"
+                            src="/Pictures/email.svg"
+                            name="email"
+                            link="mailto:antoine.muneret@hotmail.fr"
+                        />
+                    </div>
+                    <div class="pdf__download" @click="downloadPdf">Download my resume</div>
                 </div>
             </div>
         </section>
