@@ -11,6 +11,10 @@
         "src": "/Tech_Logos/c.svg",
         "description": "A bit rusted"
     },
+    "blender": {
+        "src": "/Tech_Logos/blender.svg",
+        "description": "Intermediate"
+    },
     "java": {
         "src": "/Tech_Logos/java.svg",
         "description": "Beginner"
