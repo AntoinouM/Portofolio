@@ -20,6 +20,10 @@
     user-select: none;
 }
 
+body {
+    background-color: $secondary;
+}
+
 .section {
     background-color: $secondary;
     color: $smoke-white;

@@ -64,6 +64,7 @@
 <template>
 
     <div>
+        <NavBar/>
         <section class="section bento" id="bento">
             <div class="bento__container" v-if="resourcesLoaded" >
                 <div class="bento__grid">
