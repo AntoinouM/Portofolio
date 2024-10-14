@@ -116,14 +116,23 @@
             </div>
         </section>
         <section class="section projects" id="projects" v-if="resourcesLoaded" >
+            <h2 class="title2 projects__title">my projects</h2>
             <div class="projects__container">
                 <ProjectComp
                     image-src="/Projects/comixcraft_home.png"
                     name="Comixcraft"
                     description="Comixcraft is an online comic editor that lets users easily design and share comics on both mobile and desktop devices. It's simple to use, with tools that make the creative process smooth and accessible."
-                    :stack="['nuxt', 'javascript', 'css', 'sass', 'html', 'figma']"
-                    :links="[['github', 'https://github.com/comixcraft/Editor'], ['website', 'https://comixcraft.com/']]"
+                    :stack="[['nuxt', '/Tech_Logos/nuxt.svg'], ['javascript', '/Tech_Logos/javascript.svg'], ['css', '/Tech_Logos/css.svg'], ['sass', '/Tech_Logos/sass.svg'], ['html', '/Tech_Logos/html.svg'], ['figma', '/Tech_Logos/figma.svg']]"
+                    :links="[['github', '/Tech_Logos/github.svg', 'https://github.com/comixcraft/Editor'], ['website', '/Pictures/world-globe-line-icon.svg', 'https://comixcraft.com/']]"
                     :stack-resource="stackResources"
+                />
+                <ProjectComp
+                    image-src="/Projects/mindretreat_home.png"
+                    name="The mind retreat"
+                    description="The mind retreat is an institution based in Bali. It offers retreats for mental well-being, combining holistic therapies, hypnotherapy, and nature immersion to help guests rejuvenate and find inner peace."
+                    :stack="[['nuxt', '/Tech_Logos/nuxt.svg'], ['javascript', '/Tech_Logos/javascript.svg'], ['css', '/Tech_Logos/css.svg'], ['sass', '/Tech_Logos/sass.svg'], ['html', '/Tech_Logos/html.svg'], ['figma', '/Tech_Logos/figma.svg'], ['photoshop', '/Tech_Logos/photoshop.svg']]"
+                    :links="[['github', '/Tech_Logos/github.svg', 'https://github.com/AntoinouM/website'], ['website', '/Pictures/world-globe-line-icon.svg', 'coming soon']]"
+                    :reverse="true"
                 />
             </div>
         </section>

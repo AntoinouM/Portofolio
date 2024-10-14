@@ -23,6 +23,10 @@
         "src": "/Tech_Logos/css.svg",
         "description": "Advanced"
     },
+    "d3": {
+        "src": "/Tech_Logos/d3.svg",
+        "description": "Intermediate"
+    },
     "sass": {
         "src": "/Tech_Logos/sass.svg",
         "description": "Advanced"
