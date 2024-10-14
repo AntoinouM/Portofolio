@@ -23,11 +23,14 @@
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) entry.target.classList.add('fade-in');
-          if (entry.intersectionRatio < 0.8) entry.target.classList.remove('fade-in');
+            if (entry.isIntersecting && entry.intersectionRatio >= 0.3) {
+            entry.target.classList.add('fade-in');
+          } else if (!entry.isIntersecting || entry.intersectionRatio < 0.4) {
+            entry.target.classList.remove('fade-in');
+          }
         });
       },
-      { threshold: [0.2, 0.8], }
+      { threshold: 0.4, }
     );
 
     onMounted(() => {
