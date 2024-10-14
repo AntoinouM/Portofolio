@@ -57,7 +57,7 @@
 <template>
 
     <div>
-        <section class="section bento">
+        <section class="section bento" id="bento">
             <div class="bento__container" v-if="resourcesLoaded" >
                 <div class="bento__grid">
                     <article class="bento__item bento__presentation">
@@ -106,17 +106,16 @@
                                 location="IUT2 Grenoble, France"
                             />
                         </div>
-                        <div class="education__projects">
+                        <NuxtLink class="education__projects" :to="{ path: '/', hash: '#projects'}">
                             <h3 class="projects__text">My Projects</h3>
                             <span class="projects__buffer"></span>
-                            <span class="projects__arrow">
-                            </span>
-                        </div>
+                            <span class="projects__arrow"></span>
+                        </NuxtLink>
                     </article>
                 </div>
             </div>
         </section>
-        <section class="section projects">
+        <section class="section projects" id="projects">
             
         </section>
     </div>
