@@ -163,7 +163,7 @@
             <div class="contact__container">
                 <div class="contact__photo"></div>
                 <div class="contact__location">
-                    <img src="/public/Pictures/location.svg" alt="location" class="location__picto">
+                    <img src="/Pictures/location.svg" alt="location" class="location__picto">
                     <p class="location__text">Vienna, Austria</p>
                 </div>
                 <div class="socials__container">
