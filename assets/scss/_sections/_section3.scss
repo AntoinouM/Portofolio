@@ -1,0 +1,45 @@
+.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.contact__title {
+    margin-top: $spacer-2;
+    margin-bottom: $spacer-5;
+}
+
+.contact__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: $spacer-2;
+    flex-grow: 1;
+}
+
+.contact__photo {
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    background-image: url('/Pictures/me.png');
+    background-size: cover;
+    background-position: 50% 30%;
+    margin-bottom: $spacer-2;
+    border: 2px solid $smoke-white;
+}
+
+.contact__location {
+
+    display: flex;
+    flex-direction: row;
+    gap: $spacer-3;
+    margin-bottom: $spacer-5;
+
+    & .location__picto {
+        width: 24px;
+        height: 24px;
+        filter: invert(1);
+    }
+}

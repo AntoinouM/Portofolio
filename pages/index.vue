@@ -152,14 +152,25 @@
             </div>
         </section>
         <section class="section contact" id="contact">
-            <img src="/public/Pictures/me.png" alt="" class="contact__photo">
-            <div class="contact__location"></div>
-            <div class="contact__socials">
-                <LinkComp class="social socials_github"
-                    src="/public/Tech_Logos/github.svg"
-                    name="github"
-                    link="https://github.com/AntoinouM"
-                />
+            <h2 class="title2 contact__title">Let's connect</h2>
+            <div class="contact__container">
+                <div class="contact__photo"></div>
+                <div class="contact__location">
+                    <img src="/public/Pictures/location.svg" alt="location" class="location__picto">
+                    <p class="location__text">Vienna, Austria</p>
+                </div>
+                <div class="contact__socials">
+                    <LinkComp class="social socials_github"
+                        src="/Tech_Logos/github.svg"
+                        name="github"
+                        link="https://github.com/AntoinouM"
+                    />
+                    <LinkComp class="social socials_linkedin"
+                        src="/Tech_Logos/linkedin.svg"
+                        name="github"
+                        link="https://www.linkedin.com/in/antoine-muneret-5b81b9123/"
+                    />
+                </div>
             </div>
         </section>
     </div>
