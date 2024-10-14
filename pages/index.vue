@@ -49,7 +49,7 @@
             console.log(e.detail.message)
             assignJSONToResources(stack, stackResources.value)
         })
-        resourceLoader.manageResources(['Tech_Logos', 'Pictures'])
+        resourceLoader.manageResources(['Tech_Logos', 'Pictures', 'Projects']);
     })
 
 </script>
@@ -117,7 +117,14 @@
         </section>
         <section class="section projects" id="projects" v-if="resourcesLoaded" >
             <div class="projects__container">
-
+                <ProjectComp
+                    image-src="/Projects/comixcraft_home.png"
+                    name="Comixcraft"
+                    description="Comixcraft is an online comic editor that lets users easily design and share comics on both mobile and desktop devices. It's simple to use, with tools that make the creative process smooth and accessible."
+                    :stack="['nuxt', 'javascript', 'css', 'sass', 'html', 'figma']"
+                    :links="[['github', 'https://github.com/comixcraft/Editor'], ['website', 'https://comixcraft.com/']]"
+                    :stack-resource="stackResources"
+                />
             </div>
         </section>
     </div>
@@ -125,6 +132,7 @@
 </template>
 
 <style lang="scss" scoped>
+
 
     
 </style>
