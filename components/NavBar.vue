@@ -35,15 +35,20 @@
         width: 100%;
         height: $navbar-height;
         display: flex;
-        justify-content: center;
+        justify-content: end;
         z-index: 100;
+        padding-right: $spacer-10;
+        padding-top: $spacer-2;
 
         & .navbar__btn {
             height: $navbar-height;
             width: $navbar-height;
             background-color: $grey-90;
             border-radius: $border-radius-lg;
-            background-image: url('/public/Pictures/menu-burger.svg');
+            background-image: url('/Pictures/menu-burger.svg');
+            background-position: center center;
+            background-size: 70%;
+            background-repeat: no-repeat;
 
             &:hover {
                 cursor: pointer;
