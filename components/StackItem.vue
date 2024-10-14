@@ -34,6 +34,7 @@
             height: 100%;
             object-position: center center;
             filter: grayscale(.9);
+            -webkit-transition : -webkit-filter 300ms ease-out, transform 300ms ease-out;
             transition: all .3s ease-out;
 
             &:hover {
@@ -60,6 +61,7 @@
             background-color: $grey-90;
             z-index: 10;
             transition: all .3s ease-in;
+            filter: drop-shadow(5px 5px 10px #000000);
         }
 
         &__logo:hover + .stackItem__tooltip {

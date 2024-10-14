@@ -8,7 +8,7 @@
     const resourcesLoaded = ref(false);
 
     const presentationContent = ref(null)
-    let activePresentationIndex = ref(0);
+    let activePresentationIndex = ref(1);
     const presentation = {
         target: ['For everyone', 'For recruiters', 'For developers'],
         content: [
@@ -41,6 +41,13 @@
         scale: -1,
     }
 
+    function downloadPdf() {
+        const link = document.createElement('a');
+            link.href = '/Resume.pdf';
+            link.download = 'resume_antoine_muneret(must hire).pdf';
+            link.click();
+    }
+
     onMounted(() => {
         // manage resources
         resourceLoader.addEventListener('end', (e) => {
@@ -49,7 +56,7 @@
             console.log(e.detail.message)
             assignJSONToResources(stack, stackResources.value)
         })
-        resourceLoader.manageResources(['Tech_Logos', 'Pictures'])
+        resourceLoader.manageResources(['Tech_Logos', 'Pictures', 'Projects']);
     })
 
 </script>
@@ -87,7 +94,7 @@
                         />
                     </article>
                     <article class="bento__item bento__stack">
-                        <h3 class="title3 stack__title">My stack</h3>
+                        <h3 class="title4 stack__title">My stack</h3>
                         <div class="stack__container">
                             <StackItem v-for="resource in stackResources" :key="resource.key" :item="resource" class="stack__item"/>
                         </div>
@@ -115,14 +122,78 @@
                 </div>
             </div>
         </section>
-        <section class="section projects" id="projects">
-            
+        <section class="section projects" id="projects" v-if="resourcesLoaded" >
+            <h2 class="title2 projects__title">my projects</h2>
+            <div class="projects__container">
+                <ProjectComp
+                    image-src="/Projects/comixcraft_home.png"
+                    name="Comixcraft"
+                    description="Comixcraft is an online comic editor that lets users easily design and share comics on both mobile and desktop devices. It's simple to use, with tools that make the creative process smooth and accessible."
+                    :stack="[['nuxt', '/Tech_Logos/nuxt.svg'], ['javascript', '/Tech_Logos/javascript.svg'], ['css', '/Tech_Logos/css.svg'], ['sass', '/Tech_Logos/sass.svg'], ['html', '/Tech_Logos/html.svg'], ['figma', '/Tech_Logos/figma.svg']]"
+                    :links="[['github', '/Tech_Logos/github.svg', 'https://github.com/comixcraft/Editor'], ['website', '/Pictures/world-globe-line-icon.svg', 'https://comixcraft.com/']]"
+                    :stack-resource="stackResources"
+                />
+                <ProjectComp
+                    image-src="/Projects/mindretreat_home.png"
+                    name="The mind retreat"
+                    description="The mind retreat is an institution based in Bali. It offers retreats for mental well-being, combining holistic therapies, hypnotherapy, and nature immersion to help guests rejuvenate and find inner peace."
+                    :stack="[['nuxt', '/Tech_Logos/nuxt.svg'], ['javascript', '/Tech_Logos/javascript.svg'], ['css', '/Tech_Logos/css.svg'], ['sass', '/Tech_Logos/sass.svg'], ['html', '/Tech_Logos/html.svg'], ['figma', '/Tech_Logos/figma.svg'], ['photoshop', '/Tech_Logos/photoshop.svg']]"
+                    :links="[['github', '/Tech_Logos/github.svg', 'https://github.com/AntoinouM/website'], ['website', '/Pictures/world-globe-line-icon.svg', 'coming soon']]"
+                    :reverse="true"
+                />
+                <ProjectComp
+                    image-src="/Projects/astro_game.png"
+                    name="Stranded on Mars"
+                    description="'Stranded on Mars' is a 3D video-game. A small astronaut crashes his rocket on an unfamiliar planet. To repair it and get back home, he has to explore the area and gather resources."
+                    :stack="[['csharp', '/Tech_Logos/csharp.svg'], ['blender', '/Tech_Logos/blender.svg'], ['unity', '/Tech_Logos/unity.svg']]"
+                    :links="[['github', '/Tech_Logos/github.svg', 'https://github.com/AntoinouM/CrossRealityDev']]"
+                />
+                <ProjectComp
+                    image-src="/Projects/astro_browser.png"
+                    name="Stranded on Mars"
+                    description="A simple browser game. Some collectibles planets are falling from the sky giving you fuel for your Jetpack. Try to reach the highest you can to make the better score. (not mobile friendly)"
+                    :stack="[['javascript', '/Tech_Logos/javascript.svg'], ['html', '/Tech_Logos/html.svg'], ['css', '/Tech_Logos/css.svg']]"
+                    :links="[['github', '/Tech_Logos/github.svg', 'https://github.com/AntoinouM/CCL-NavigatorGame'], ['website', '/Pictures/world-globe-line-icon.svg', 'https://astro-browsergame.netlify.app']]"
+                    :reverse="true"
+                />
+            </div>
+        </section>
+        <section class="section contact" id="contact">
+            <h2 class="title2 contact__title">Let's connect</h2>
+            <div class="contact__container">
+                <div class="contact__photo"></div>
+                <div class="contact__location">
+                    <img src="/public/Pictures/location.svg" alt="location" class="location__picto">
+                    <p class="location__text">Vienna, Austria</p>
+                </div>
+                <div class="socials__container">
+                    <div class="contact__socials">
+                        <LinkComp class="social socials_github"
+                            src="/Tech_Logos/github.svg"
+                            name="github"
+                            link="https://github.com/AntoinouM"
+                        />
+                        <LinkComp class="social socials_linkedin"
+                            src="/Pictures/linkedin.svg"
+                            name="linkedin"
+                            link="https://www.linkedin.com/in/antoine-muneret-5b81b9123/"
+                        />
+                        <LinkComp class="social socials_email"
+                            src="/Pictures/email.svg"
+                            name="email"
+                            link="mailto:antoine.muneret@hotmail.fr"
+                        />
+                    </div>
+                    <div class="pdf__download" @click="downloadPdf">Download my resume</div>
+                </div>
+            </div>
         </section>
     </div>
     
 </template>
 
 <style lang="scss" scoped>
+
 
     
 </style>

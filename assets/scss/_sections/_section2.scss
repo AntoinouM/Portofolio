@@ -1,0 +1,23 @@
+.projects {
+    height: fit-content !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.projects__title {
+    margin-top: $spacer-2;
+    margin-bottom: $spacer-5;
+}
+
+.projects__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    width: 80%;
+    max-width: 1000px;
+    gap: $spacer-6;
+}

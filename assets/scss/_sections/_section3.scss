@@ -1,0 +1,110 @@
+.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.contact__title {
+    margin-top: $spacer-2;
+    margin-bottom: $spacer-5;
+}
+
+.contact__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: $spacer-2;
+    flex-grow: 1;
+
+    @include breakpoint-max-width(md) {
+        width: 100% !important;
+    }
+}
+
+.contact__photo {
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    background-image: url('/Pictures/me.png');
+    background-size: cover;
+    background-position: 50% 30%;
+    margin-bottom: $spacer-2;
+    border: 2px solid $smoke-white;
+}
+
+.contact__location {
+
+    display: flex;
+    flex-direction: row;
+    gap: $spacer-3;
+    margin-bottom: $spacer-5;
+
+    & .location__picto {
+        width: 24px;
+        height: 24px;
+        filter: invert(1);
+    }
+}
+
+.socials__container {
+    display: flex;
+    flex-direction: column;
+    gap: $spacer-4;
+
+    & .pdf__download {
+        font-size: 1rem;
+        display: flex;
+        justify-content: center;
+        color: $smoke-white;
+        position: relative;
+        padding: $spacer-3;
+        border-radius: $border-radius;
+        border: $border-width solid $smoke-white;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        &::after {
+            display:block;
+            position: absolute;
+            bottom: 20%;
+            content: '';
+            border-bottom: solid 2px $smoke-white; 
+            border-radius: 5px;
+            width: 50%; 
+            transform: scaleX(0);  
+            transition: transform 250ms ease-in-out;
+        }
+
+        &:hover:after {
+            transform: scaleX(1);
+        }
+    }
+}
+
+.contact__socials {
+    display: flex;
+    gap: $spacer-3;
+
+    @include breakpoint-max-width(md) {
+        flex-direction: column;
+        width: 100% !important;
+        align-items: center;
+    }
+
+    & .social {
+        padding: $spacer-2 $spacer-3;
+        background-color: $grey-90;
+        border-radius: $border-radius-lg;
+
+        @include breakpoint-max-width(md) {
+            width: 60% !important;
+            display: flex;
+            gap: $spacer-4;
+            justify-content: center;
+        }
+    }
+}

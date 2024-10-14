@@ -206,7 +206,9 @@
 .bento__quote {
     grid-area: quote;
     background-color: $lapis-blue;
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     @include breakpoint-max-width(md) {
         display: none;

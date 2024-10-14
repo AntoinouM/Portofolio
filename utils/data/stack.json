@@ -11,6 +11,10 @@
         "src": "/Tech_Logos/c.svg",
         "description": "A bit rusted"
     },
+    "blender": {
+        "src": "/Tech_Logos/blender.svg",
+        "description": "Intermediate"
+    },
     "java": {
         "src": "/Tech_Logos/java.svg",
         "description": "Beginner"
@@ -22,6 +26,10 @@
     "css": {
         "src": "/Tech_Logos/css.svg",
         "description": "Advanced"
+    },
+    "d3": {
+        "src": "/Tech_Logos/d3.svg",
+        "description": "Intermediate"
     },
     "sass": {
         "src": "/Tech_Logos/sass.svg",
