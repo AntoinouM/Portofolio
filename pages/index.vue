@@ -116,6 +116,9 @@
                 </div>
             </div>
         </section>
+        <section class="section projects">
+            
+        </section>
     </div>
     
 </template>
