@@ -151,6 +151,17 @@
                 />
             </div>
         </section>
+        <section class="section contact" id="contact">
+            <img src="/public/Pictures/me.png" alt="" class="contact__photo">
+            <div class="contact__location"></div>
+            <div class="contact__socials">
+                <LinkComp class="social socials_github"
+                    src="/public/Tech_Logos/github.svg"
+                    name="github"
+                    link="https://github.com/AntoinouM"
+                />
+            </div>
+        </section>
     </div>
     
 </template>
