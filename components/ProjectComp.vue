@@ -14,10 +14,10 @@
     const imageContainer = ref(null);
 
     const computedImageWidth = computed(() => {
-        return projectImage.value ? projectImage.value.naturalWidth * (370 / projectImage.value.naturalHeight) + 'px' : null;
+        return projectImage.value ? projectImage.value.naturalWidth * (350 / projectImage.value.naturalHeight) + 'px' : null;
     });
     const computedImagePosition = computed(() => {
-        return imageContainer.value && projectImage.value ? (projectImage.value.naturalWidth * (370 / projectImage.value.naturalHeight) - imageContainer.value.offsetWidth) * -1 + 'px' : null;
+        return imageContainer.value && projectImage.value ? (projectImage.value.naturalWidth * (350 / projectImage.value.naturalHeight) - imageContainer.value.offsetWidth) * -1 + 'px' : null;
     })
 
     const observer = new IntersectionObserver(
@@ -152,16 +152,17 @@
 
                 & > img {
                     position: absolute;
-                    top: -10px;
+                    top: 0;
                     left: 0;
-                    height: calc($container-height + 20px);
+                    height: $container-height ;
                     width: v-bind(computedImageWidth);
+                    transform: scaleY(1.05);
                 }
 
                 & > img.fromRight {
                     /* change here for position */
                     right: 0 !important;
-                    transform: translateX(v-bind(computedImagePosition));
+                    transform: translateX(v-bind(computedImagePosition)) scaleY(1.05);
                 }
             }
 
@@ -174,6 +175,7 @@
                 border-radius: $border-radius-xl;
                 transition: all .3s ease-out;
                 z-index: 11;
+                transform-origin: 50% 100%;
 
                 @include breakpoint-max-width(md) {
                     height: 160px;
