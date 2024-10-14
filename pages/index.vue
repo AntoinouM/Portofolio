@@ -136,10 +136,17 @@
                 />
                 <ProjectComp
                     image-src="/Projects/astro_game.png"
-                    name="The mind retreat"
-                    description="The mind retreat is an institution based in Bali. It offers retreats for mental well-being, combining holistic therapies, hypnotherapy, and nature immersion to help guests rejuvenate and find inner peace."
-                    :stack="[['nuxt', '/Tech_Logos/nuxt.svg'], ['javascript', '/Tech_Logos/javascript.svg'], ['css', '/Tech_Logos/css.svg'], ['sass', '/Tech_Logos/sass.svg'], ['html', '/Tech_Logos/html.svg'], ['figma', '/Tech_Logos/figma.svg'], ['photoshop', '/Tech_Logos/photoshop.svg']]"
-                    :links="[['github', '/Tech_Logos/github.svg', 'https://github.com/AntoinouM/website'], ['website', '/Pictures/world-globe-line-icon.svg', 'coming soon']]"
+                    name="Stranded on Mars"
+                    description="'Stranded on Mars' is a 3D video-game. A small astronaut crashes his rocket on an unfamiliar planet. To repair it and get back home, he has to explore the area and gather resources."
+                    :stack="[['csharp', '/Tech_Logos/csharp.svg'], ['blender', '/Tech_Logos/blender.svg'], ['unity', '/Tech_Logos/unity.svg']]"
+                    :links="[['github', '/Tech_Logos/github.svg', 'https://github.com/AntoinouM/CrossRealityDev']]"
+                />
+                <ProjectComp
+                    image-src="/Projects/astro_browser.png"
+                    name="Stranded on Mars"
+                    description="A simple browser game. Some collectibles planets are falling from the sky giving you fuel for your Jetpack. Try to reach the highest you can to make the better score. (not mobile friendly)"
+                    :stack="[['javascript', '/Tech_Logos/javascript.svg'], ['html', '/Tech_Logos/html.svg'], ['css', '/Tech_Logos/css.svg']]"
+                    :links="[['github', '/Tech_Logos/github.svg', 'https://github.com/AntoinouM/CCL-NavigatorGame'], ['website', '/Pictures/world-globe-line-icon.svg', 'https://astro-browsergame.netlify.app']]"
                     :reverse="true"
                 />
             </div>
