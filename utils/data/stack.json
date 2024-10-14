@@ -1,0 +1,74 @@
+{
+    "javascript": {
+        "src": "/Tech_Logos/js.svg",
+        "description": "The language I used the most"
+    },
+    "typescript": {
+        "src": "/Tech_Logos/ts.svg",
+        "description": "Starting out"
+    },
+    "csharp": {
+        "src": "/Tech_Logos/c.svg",
+        "description": "A bit rusted"
+    },
+    "java": {
+        "src": "/Tech_Logos/java.svg",
+        "description": "Beginner"
+    },
+    "kotlin": {
+        "src": "/Tech_Logos/kotlin.svg",
+        "description": "A bit rusted"
+    },
+    "css": {
+        "src": "/Tech_Logos/css.svg",
+        "description": "Advanced"
+    },
+    "sass": {
+        "src": "/Tech_Logos/sass.svg",
+        "description": "Advanced"
+    },
+    "mysql": {
+        "src": "/Tech_Logos/mysql.svg",
+        "description": "Intermediate"
+    },
+    "html": {
+        "src": "/Tech_Logos/html.svg",
+        "description": "Expert"
+    },
+    "vue": {
+        "src": "/Tech_Logos/vue.svg",
+        "description": "My preferred framework"
+    },
+    "nuxt": {
+        "src": "/Tech_Logos/nuxt.svg",
+        "description": "Advanced"
+    },
+    "node": {
+        "src": "/Tech_Logos/node.svg",
+        "description": "The basics covered"
+    },
+    "express": {
+        "src": "/Tech_Logos/express.svg",
+        "description": "Intermediate"
+    },
+    "angular": {
+        "src": "/Tech_Logos/angular.svg",
+        "description": "Doing the first projects"
+    },
+    "figma": {
+        "src": "/Tech_Logos/figma.svg",
+        "description": "Intermediate"
+    },
+    "github": {
+        "src": "/Tech_Logos/github.svg",
+        "description": "Regular handling"
+    },
+    "unity": {
+        "src": "/Tech_Logos/unity.svg",
+        "description": "Beginner"
+    },
+    "photoshop": {
+        "src": "/Tech_Logos/photoshop.svg",
+        "description": "Intermediate"
+    }
+}
