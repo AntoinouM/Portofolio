@@ -27,7 +27,7 @@
 
     .isRounded {
         border-radius: $border-radius-lg $border-radius-lg 0 0 !important;
-        border: $border-width solid $smoke-white;
+        border: $border-width solid $smoke-white !important;
         transform: rotate(90deg) !important;
         transition: transform .3s ease-out;
     }
@@ -44,17 +44,27 @@
         padding-top: $spacer-2;
         transition: transform .3s ease-out;
 
+        @include breakpoint-max-width(md) {
+            justify-content: center;
+            padding-right: 0;
+        }
+
         & .navbar__btn {
             height: $navbar-height;
             width: $navbar-height;
             background-color: $grey-90;
             border-radius: $border-radius-lg;
+            border: $border-width solid $lapis-blue;
             background-image: url('/Pictures/menu-burger.svg');
             background-position: center center;
             background-size: 70%;
             background-repeat: no-repeat;
             transform: rotate(0);
             transition: transform .3s ease-out;
+
+            @include breakpoint-max-width(md) {
+                border: $border-width solid $lapis-blue;
+            }
 
             &:hover {
                 cursor: pointer;

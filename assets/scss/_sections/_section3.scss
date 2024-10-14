@@ -24,7 +24,7 @@
     }
 
     & .contact__name {
-        margin-bottom: $spacer-4;
+        margin: $spacer-4;
     }
 }
 
@@ -106,7 +106,7 @@
         border-radius: $border-radius-lg;
 
         @include breakpoint-max-width(md) {
-            width: 60% !important;
+            width: 100% !important;
             display: flex;
             gap: $spacer-4;
             justify-content: center;

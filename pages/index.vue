@@ -159,7 +159,7 @@
                 />
             </div>
         </section>
-        <section class="section contact" id="contact">
+        <section class="section contact" id="contact" v-if="resourcesLoaded">
             <h2 class="title2 contact__title">Let's connect</h2>
             <div class="contact__container">
                 <div class="title4 contact__name">Antoine Muneret</div>

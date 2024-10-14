@@ -20,4 +20,8 @@
     width: 80%;
     max-width: 1000px;
     gap: $spacer-6;
+
+    @include breakpoint-max-width(lg) {
+        width: 95%;
+    }
 }

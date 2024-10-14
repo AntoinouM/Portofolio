@@ -103,6 +103,14 @@
             "picture description"
             "picture links";
 
+        @include breakpoint-max-width(md) {
+            height: fit-content;
+            display: flex;
+            flex-direction: column;
+            gap: $spacer-2;
+            align-items: center;
+        }
+
         & .grid__child {
             justify-self: stretch;
             align-self: stretch;
@@ -119,6 +127,17 @@
         grid-template-areas: 
             "description picture"
             "links picture";
+
+        @include breakpoint-max-width(md) {
+            height: fit-content;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1.5fr .5fr;
+
+            grid-template-areas: 
+                "picture"
+                "description"
+                "links";
+        }
     }
 
     .project {
@@ -155,6 +174,11 @@
                 border-radius: $border-radius-xl;
                 transition: all .3s ease-out;
                 z-index: 11;
+
+                @include breakpoint-max-width(md) {
+                    height: 160px;
+                    width: 100%;
+                }
             }
         }
 
@@ -205,6 +229,10 @@
             display: flex;
             justify-content: space-evenly;
             align-items: center;
+
+            @include breakpoint-max-width(md) {
+                padding: $spacer-2 !important;
+            }
         }
     }
     
