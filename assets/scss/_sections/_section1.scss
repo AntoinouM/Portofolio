@@ -20,7 +20,7 @@
 
     &__container {
         width: 80%;
-        max-width: 940px;
+        max-width: $max-width;
         height: 90%;
 
         @include breakpoint-max-width(lg) {
