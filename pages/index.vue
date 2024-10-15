@@ -66,6 +66,7 @@
     <div>
         <NavBar/>
         <section class="section bento" id="bento">
+            <div class="spinner" v-if="!resourcesLoaded"></div>
             <div class="bento__container" v-if="resourcesLoaded" >
                 <div class="bento__grid">
                     <article class="bento__item bento__presentation">
@@ -150,7 +151,7 @@
                 />
                 <ProjectComp
                     image-src="/Projects/astro_browser.png"
-                    name="Stranded on Mars"
+                    name="Elevate!"
                     description="A simple browser game. Some collectibles planets are falling from the sky giving you fuel for your Jetpack. Try to reach the highest you can to make the better score. (not mobile friendly)"
                     :stack="[['javascript', '/Tech_Logos/javascript.svg'], ['html', '/Tech_Logos/html.svg'], ['css', '/Tech_Logos/css.svg'], ['photoshop', '/Tech_Logos/photoshop.svg']]"
                     :links="[['github', '/Tech_Logos/github.svg', 'https://github.com/AntoinouM/CCL-NavigatorGame'], ['website', '/Pictures/world-globe-line-icon.svg', 'https://astro-browsergame.netlify.app']]"
