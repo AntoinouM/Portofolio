@@ -66,7 +66,9 @@
     <div>
         <NavBar/>
         <section class="section bento" id="bento">
-            <div class="spinner" v-if="!resourcesLoaded"></div>
+            <div class="spinner" v-if="!resourcesLoaded">
+                <div class="spinner__item"></div>
+            </div>
             <div class="bento__container" v-if="resourcesLoaded" >
                 <div class="bento__grid">
                     <article class="bento__item bento__presentation">
