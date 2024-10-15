@@ -5,8 +5,8 @@
     import { assignJSONToResources } from '~/utils/utilsFunctions';
 
     useSeoMeta({
-        title: 'Antoine Muneret Portofolio',
-        ogTitle: 'Antoine Muneret Portofolio',
+        title: 'Antoine Muneret',
+        ogTitle: 'Antoine Muneret',
         description: 'This is my portofolio. I am trying to showcase my past or current projects and tell you more about myself.',
         ogDescription: 'This is my portofolio. I am trying to showcase my past or current projects and tell you more about myself.',
         ogImage: '/favicon/web-app-manifest-192x192.png',
