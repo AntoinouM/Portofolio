@@ -29,7 +29,8 @@
         border-radius: $border-radius-lg $border-radius-lg 0 0 !important;
         border: $border-width solid $smoke-white !important;
         transform: rotate(90deg) !important;
-        transition: transform .3s ease-out;
+        background-size: 50% !important;
+        transition: all .3s ease-out;
     }
     
     .navbar__container {
@@ -60,7 +61,7 @@
             background-size: 70%;
             background-repeat: no-repeat;
             transform: rotate(0);
-            transition: transform .3s ease-out;
+            transition: all .3s ease-out;
 
             @include breakpoint-max-width(md) {
                 border: $border-width solid $lapis-blue;
