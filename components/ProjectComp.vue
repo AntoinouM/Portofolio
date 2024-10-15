@@ -142,11 +142,17 @@
 
     .project {
 
+        $image-height: 160px;
+
         &__image {
             grid-area: picture;
             padding: 0 !important;
             position: relative;
             overflow: visible !important;
+
+            @include breakpoint-max-width(md) {
+                height: $image-height;
+            }
 
             &:hover {
 
@@ -157,12 +163,23 @@
                     height: $container-height ;
                     width: v-bind(computedImageWidth);
                     transform: scaleY(1.05);
+
+                    @include breakpoint-max-width(md) {
+                        position: inherit;
+                        height: 100%;
+                        width: 100% !important;
+                        transform: scaleY(1) !important;
+                    }
                 }
 
                 & > img.fromRight {
                     /* change here for position */
                     right: 0 !important;
                     transform: translateX(v-bind(computedImagePosition)) scaleY(1.05);
+
+                    @include breakpoint-max-width(md) {
+                        transform: translateX(0) scaleY(1) !important;
+                    }
                 }
             }
 
@@ -178,7 +195,7 @@
                 transform-origin: 50% 100%;
 
                 @include breakpoint-max-width(md) {
-                    height: 160px;
+                    height: 100%;
                     width: 100%;
                 }
             }
