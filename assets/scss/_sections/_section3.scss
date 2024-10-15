@@ -68,7 +68,7 @@
         justify-content: center;
         color: $smoke-white;
         position: relative;
-        padding: $spacer-3 0;
+        padding: $spacer-3;
         border-radius: $border-radius;
         border: $border-width solid $smoke-white;
         margin-bottom: $spacer-5;
@@ -84,7 +84,7 @@
             content: '';
             border-bottom: solid 2px $smoke-white; 
             border-radius: 5px;
-            width: 50%; 
+            width: 40%; 
             transform: scaleX(0);  
             transition: transform 250ms ease-in-out;
         }
