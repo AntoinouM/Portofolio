@@ -75,7 +75,7 @@
                         <div ref="presentationContent" class="presentation__content">{{ presentation.content[activePresentationIndex] }}</div>
                     </article>
                     <article class="bento__item bento__picture">
-                        <img src="/Pictures/climbing.jpg" alt="man climbing">
+                        <img src="/public/Pictures/climbing.jpg" alt="man climbing">
                         <svg class="picture__svg" viewBox="0 0 54 45" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
                             <path class="picture__path" d="M53.5 2.50001C43.6666 -0.16666 23.5 -1.19999 21.5 16C19.5 33.2 31.1667 33.8333 38 31C43.7186 28.6289 45.1 20.8 39.5 16C32.5 10 18.5 14.5 10 29C3.2 40.6 1.16667 44.1667 1 44.5M1 44.5V36M1 44.5L8.5 42.5" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
