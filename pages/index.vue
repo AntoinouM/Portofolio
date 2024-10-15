@@ -1,7 +1,17 @@
 <script  setup>
+    import SpinnerComp from '~/components/SpinnerComp.vue';
     import stack from '~/utils/data/stack.json';
     import ResourceManager from '~/utils/ResourcesManager/ResourceManager';
     import { assignJSONToResources } from '~/utils/utilsFunctions';
+
+    useSeoMeta({
+        title: 'Antoine Muneret Portofolio',
+        ogTitle: 'Antoine Muneret Portofolio',
+        description: 'This is my portofolio. I am trying to showcase my past or current projects and tell you more about myself.',
+        ogDescription: 'This is my portofolio. I am trying to showcase my past or current projects and tell you more about myself.',
+        ogImage: '/favicon/web-app-manifest-192x192.png',
+        twitterCard: 'summary_large_image',
+    })
 
     const resourceLoader = new ResourceManager();
     const stackResources = ref(null);
@@ -66,7 +76,9 @@
     <div>
         <NavBar/>
         <section class="section bento" id="bento">
-            <div class="spinner" v-if="!resourcesLoaded"></div>
+            <div class="spinner" v-if="!resourcesLoaded">
+                <SpinnerComp/>
+            </div>
             <div class="bento__container" v-if="resourcesLoaded" >
                 <div class="bento__grid">
                     <article class="bento__item bento__presentation">
