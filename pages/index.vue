@@ -3,6 +3,15 @@
     import ResourceManager from '~/utils/ResourcesManager/ResourceManager';
     import { assignJSONToResources } from '~/utils/utilsFunctions';
 
+    useSeoMeta({
+        title: 'Antoine Muneret Portofolio',
+        ogTitle: 'Antoine Muneret Portofolio',
+        description: 'This is my portofolio. I am trying to showcase my past or current projects and tell you more about myself.',
+        ogDescription: 'This is my portofolio. I am trying to showcase my past or current projects and tell you more about myself.',
+        ogImage: '/favicon/web-app-manifest-192x192.png',
+        twitterCard: 'summary_large_image',
+    })
+
     const resourceLoader = new ResourceManager();
     const stackResources = ref(null);
     const resourcesLoaded = ref(false);
