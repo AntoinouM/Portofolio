@@ -1,4 +1,5 @@
 <script  setup>
+    import SpinnerComp from '~/components/SpinnerComp.vue';
     import stack from '~/utils/data/stack.json';
     import ResourceManager from '~/utils/ResourcesManager/ResourceManager';
     import { assignJSONToResources } from '~/utils/utilsFunctions';
@@ -76,7 +77,7 @@
         <NavBar/>
         <section class="section bento" id="bento">
             <div class="spinner" v-if="!resourcesLoaded">
-                <div class="spinner__item"></div>
+                <SpinnerComp/>
             </div>
             <div class="bento__container" v-if="resourcesLoaded" >
                 <div class="bento__grid">

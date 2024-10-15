@@ -8,6 +8,7 @@
 
 <template>
     <div class="loadContainer">
+        <div class="loadText body">loading</div>
         <div class="loadInner">
             <div class="loadCircle">
                 <div class="loadCircleInner"></div>
@@ -30,24 +31,30 @@
 
 <style lang="scss" scoped>
     
-    /* Loader CSS */
-    .loadContainer{
-        --loaderSize: 200px; /* size of the container */
-    }
+    $loaderSize: 200px; /* size of the container */
+    $loaderSpeed: 1.5s;
+    $border-thickness: 5px; /* the bigger the loader is, the thicker this needs to be */
+    $loader-base-color: $electric-blue; /* rgb color */
 
-    .loadCircle{
-        --loaderSpeed: 1.5s;
-    }
+    .loadText {
+        animation: typing 1.5s infinite alternate;
+        color: $loader-base-color;
 
-    .loadCircleInner{
-        --border-thickness: 5px; /* the bigger the loader is, the thicker this needs to be */
-        --loader-base-color: 63,201,255; /* rgb color */
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        @keyframes typing {
+          from { color: $loader-base-color }
+          to { color: rgba($loader-base-color,0) }
+        }
     }
 
     .loadContainer{
         position: relative;
-        width: var(--loaderSize);
-        height: var(--loaderSize);
+        width: $loaderSize;
+        height: $loaderSize;
     }
 
     .loadInner{
@@ -69,11 +76,11 @@
         width: 100%;
         height: 100%;
         border-radius: 100%;
-        border: var(--border-thickness) solid rgba(var(--loader-base-color),0.7);
+        border: $border-thickness solid rgba($loader-base-color,0.7);
         border-right: none;
         border-top: none;
         background-clip: padding;
-        box-shadow: inset 0px 0px 10px rgba(var(--loader-base-color),0.15);
+        box-shadow: inset 0px 0px 10px rgba($loader-base-color,0.15);
     }
     .loadCircle:nth-of-type(0){
         transform: rotate(0deg);
@@ -83,11 +90,11 @@
             -moz-transform: rotate(0deg);
     }
     .loadCircle:nth-of-type(0) .loadCircleInner{
-        animation: loaderSpin var(--loaderSpeed) infinite linear;
-            -o-animation: loaderSpin var(--loaderSpeed) infinite linear;
-            -ms-animation: loaderSpin var(--loaderSpeed) infinite linear;
-            -webkit-animation: loaderSpin var(--loaderSpeed) infinite linear;
-            -moz-animation: loaderSpin var(--loaderSpeed) infinite linear;
+        animation: loaderSpin $loaderSpeed infinite linear;
+            -o-animation: loaderSpin $loaderSpeed infinite linear;
+            -ms-animation: loaderSpin $loaderSpeed infinite linear;
+            -webkit-animation: loaderSpin $loaderSpeed infinite linear;
+            -moz-animation: loaderSpin $loaderSpeed infinite linear;
     }
     .loadCircle:nth-of-type(1){
         transform: rotate(70deg);
@@ -97,11 +104,11 @@
             -moz-transform: rotate(70deg);
     }
     .loadCircle:nth-of-type(1) .loadCircleInner{
-        animation: loaderSpin var(--loaderSpeed) infinite linear;
-            -o-animation: loaderSpin var(--loaderSpeed) infinite linear;
-            -ms-animation: loaderSpin var(--loaderSpeed) infinite linear;
-            -webkit-animation: loaderSpin var(--loaderSpeed) infinite linear;
-            -moz-animation: loaderSpin var(--loaderSpeed) infinite linear;
+        animation: loaderSpin $loaderSpeed infinite linear;
+            -o-animation: loaderSpin $loaderSpeed infinite linear;
+            -ms-animation: loaderSpin $loaderSpeed infinite linear;
+            -webkit-animation: loaderSpin $loaderSpeed infinite linear;
+            -moz-animation: loaderSpin $loaderSpeed infinite linear;
     }
     .loadCircle:nth-of-type(2){
         transform: rotate(140deg);
@@ -111,18 +118,18 @@
             -moz-transform: rotate(140deg);
     }
     .loadCircle:nth-of-type(2) .loadCircleInner{
-        animation: loaderSpin var(--loaderSpeed) infinite linear;
-            -o-animation: loaderSpin var(--loaderSpeed) infinite linear;
-            -ms-animation: loaderSpin var(--loaderSpeed) infinite linear;
-            -webkit-animation: loaderSpin var(--loaderSpeed) infinite linear;
-            -moz-animation: loaderSpin var(--loaderSpeed) infinite linear;
+        animation: loaderSpin $loaderSpeed infinite linear;
+            -o-animation: loaderSpin $loaderSpeed infinite linear;
+            -ms-animation: loaderSpin $loaderSpeed infinite linear;
+            -webkit-animation: loaderSpin $loaderSpeed infinite linear;
+            -moz-animation: loaderSpin $loaderSpeed infinite linear;
     }
     .loadInner{
-        animation: loaderSpin (var(--loaderSpeed)*2.5) infinite linear;
-            -o-animation: loaderSpin (var(--loaderSpeed)*2.5) infinite linear;
-            -ms-animation: loaderSpin (var(--loaderSpeed)*2.5) infinite linear;
-            -webkit-animation: loaderSpin (var(--loaderSpeed)*2.5) infinite linear;
-            -moz-animation: loaderSpin (var(--loaderSpeed)*2.5) infinite linear;
+        animation: loaderSpin ($loaderSpeed*2.5) infinite linear;
+            -o-animation: (loaderSpin $loaderSpeed*2.5) infinite linear;
+            -ms-animation: (loaderSpin $loaderSpeed*2.5) infinite linear;
+            -webkit-animation: (loaderSpin $loaderSpeed*2.5) infinite linear;
+            -moz-animation: (loaderSpin $loaderSpeed*2.5) infinite linear;
     }
     @keyframes loaderSpin{
         from{
