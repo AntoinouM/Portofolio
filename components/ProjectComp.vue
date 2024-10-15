@@ -88,7 +88,7 @@
     }
 
     .project__container {
-        width: 100%;
+        width: 85%;
         height: $container-height;
         opacity: .1;
         transition: opacity 0.5s ease-in;
@@ -104,6 +104,7 @@
             "picture links";
 
         @include breakpoint-max-width(md) {
+            width: 100%;
             height: fit-content;
             display: flex;
             flex-direction: column;
@@ -215,6 +216,7 @@
 
             & .description__title {
                 font-weight: bold;
+                font-size: 1.2rem;
             }
 
             & .description__body {

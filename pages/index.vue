@@ -150,7 +150,7 @@
                     image-src="/Projects/mindretreat_home.png"
                     name="The mind retreats"
                     description="The mind retreat is an institution based in Bali. It offers retreats for mental well-being, combining holistic therapies, hypnotherapy, and nature immersion to help guests rejuvenate and find inner peace."
-                    :stack="[['nuxt', '/Tech_Logos/nuxt.svg'], ['javascript', '/Tech_Logos/javascript.svg'], ['css', '/Tech_Logos/css.svg'], ['sass', '/Tech_Logos/sass.svg'], ['html', '/Tech_Logos/html.svg'], ['figma', '/Tech_Logos/figma.svg'], ['photoshop', '/Tech_Logos/photoshop.svg']]"
+                    :stack="[['nuxt', '/Tech_Logos/nuxt.svg'], ['javascript', '/Tech_Logos/javascript.svg'], ['css', '/Tech_Logos/css.svg'], ['sass', '/Tech_Logos/sass.svg'], ['html', '/Tech_Logos/html.svg'], ['figma', '/Tech_Logos/figma.svg']]"
                     :links="[['github', '/Tech_Logos/github.svg', 'https://github.com/AntoinouM/website'], ['website', '/Pictures/world-globe-line-icon.svg', 'coming soon']]"
                     :reverse="true"
                 />

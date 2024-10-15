@@ -22,7 +22,7 @@
         display: flex;
         flex-direction: row;
         gap: $spacer-2;
-        padding: $spacer-1 $spacer-3;
+        padding: $spacer-1 $spacer-2;
         border-radius: $border-radius-lg;
         border: $border-width solid $smoke-white;
         width: fit-content;
@@ -30,14 +30,18 @@
 
         & .item {
             &__image {
-                width: 24px;
-                height: 24px;
+                width: 20px;
+                height: 20px;
             }
 
             &__name {
                 font-size: .8rem;
                 display: flex;
                 align-items: center;
+
+                @include breakpoint-max-width(md) {
+                    font-size: .8rem !important;
+                }
             }
         }
     }
