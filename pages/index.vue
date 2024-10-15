@@ -66,7 +66,7 @@
             console.log(e.detail.message)
             assignJSONToResources(stack, stackResources.value)
         })
-        resourceLoader.manageResources(['Tech_Logos', 'Pictures', 'Projects']);
+        resourceLoader.manageResources(['Tech_Logos', 'Pictures']);
     })
 
 </script>
@@ -139,7 +139,7 @@
             <h2 class="title2 projects__title">my projects</h2>
             <div class="projects__container">
                 <ProjectComp
-                    image-src="/Projects/comixcraft_home.png"
+                    image-src="https://github.com/AntoinouM/Portofolio/blob/main/public/Projects/comixcraft_home.png?raw=true"
                     name="Comixcraft"
                     description="Comixcraft is an online comic editor that lets users easily design and share comics on both mobile and desktop devices. It's simple to use, with tools that make the creative process smooth and accessible."
                     :stack="[['nuxt', '/Tech_Logos/nuxt.svg'], ['javascript', '/Tech_Logos/javascript.svg'], ['css', '/Tech_Logos/css.svg'], ['sass', '/Tech_Logos/sass.svg'], ['html', '/Tech_Logos/html.svg'], ['figma', '/Tech_Logos/figma.svg']]"
@@ -147,7 +147,7 @@
                     :stack-resource="stackResources"
                 />
                 <ProjectComp
-                    image-src="/Projects/mindretreat_home.png"
+                    image-src="https://github.com/AntoinouM/Portofolio/blob/main/public/Projects/mindretreat_home.png?raw=true"
                     name="The mind retreats"
                     description="The mind retreat is an institution based in Bali. It offers retreats for mental well-being, combining holistic therapies, hypnotherapy, and nature immersion to help guests rejuvenate and find inner peace."
                     :stack="[['nuxt', '/Tech_Logos/nuxt.svg'], ['javascript', '/Tech_Logos/javascript.svg'], ['css', '/Tech_Logos/css.svg'], ['sass', '/Tech_Logos/sass.svg'], ['html', '/Tech_Logos/html.svg'], ['figma', '/Tech_Logos/figma.svg'], ['photoshop', '/Tech_Logos/photoshop.svg']]"
@@ -155,14 +155,14 @@
                     :reverse="true"
                 />
                 <ProjectComp
-                    image-src="/Projects/astro_game.png"
+                    image-src="https://github.com/AntoinouM/Portofolio/blob/main/public/Projects/astro_game.png?raw=true"
                     name="Stranded on Mars"
                     description="'Stranded on Mars' is a 3D video-game. A small astronaut crashes his rocket on an unfamiliar planet. To repair it and get back home, he has to explore the area and gather resources."
                     :stack="[['csharp', '/Tech_Logos/csharp.svg'], ['blender', '/Tech_Logos/blender.svg'], ['unity', '/Tech_Logos/unity.svg']]"
                     :links="[['github', '/Tech_Logos/github.svg', 'https://github.com/AntoinouM/CrossRealityDev']]"
                 />
                 <ProjectComp
-                    image-src="/Projects/astro_browser.png"
+                    image-src="https://github.com/AntoinouM/Portofolio/blob/main/public/Projects/astro_browser.png?raw=true"
                     name="Elevate!"
                     description="A simple browser game. Some collectibles planets are falling from the sky giving you fuel for your Jetpack. Try to reach the highest you can to make the better score. (not mobile friendly)"
                     :stack="[['javascript', '/Tech_Logos/javascript.svg'], ['html', '/Tech_Logos/html.svg'], ['css', '/Tech_Logos/css.svg'], ['photoshop', '/Tech_Logos/photoshop.svg']]"
