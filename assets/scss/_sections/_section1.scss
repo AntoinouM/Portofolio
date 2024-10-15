@@ -138,20 +138,17 @@
     display: block;
     height: auto !important;
 
+    background-image: url('/Pictures/climbing.jpg');
+    background-position: center center;
+    background-size: cover;
+    border-radius: $border-radius-xl;
+
     @include breakpoint-max-width(lg) {
         height: 200px !important;
     }
 
     @include breakpoint-max-width(md) {
         display: none;
-    }
-    
-    & img {
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-        object-position: center 60%;
-        border-radius: $border-radius-xl;
     }
 
     & .picture__svg {
