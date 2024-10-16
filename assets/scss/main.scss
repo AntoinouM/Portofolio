@@ -34,7 +34,7 @@ body {
     overflow: hidden;
 
     @include breakpoint-max-width(md) {
-        padding: $spacer-2 $spacer-3;
+        padding: $spacer-3 !important;
         height: fit-content !important;
     }
 

@@ -90,6 +90,7 @@
 
         @include breakpoint-max-width(md) {
             height: fit-content !important;
+            border-radius: $border-radius-lg;
         }
     }
 }
@@ -229,6 +230,7 @@
 .bento__position {
     grid-area: position;
     background-color: $lapis-blue;
+    color: $smoke-white;
 
     @include breakpoint-max-width(md) {
         padding: $spacer-3;
@@ -243,11 +245,6 @@
     align-items: center;
     gap: $spacer-1;
     color: $smoke-white;
-
-    &:hover {
-        cursor: pointer;
-        border: 1px solid $smoke-white;
-    }
 
     & .name__name{
         width: 80%;

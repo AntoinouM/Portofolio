@@ -95,17 +95,17 @@
                     <article class="bento__item bento__quote">
                         <p class="body">"Whether it’s climbing or coding, I’m all about solving problems, finding the best path, and reaching the goal step by step."</p>
                     </article>
-                    <article class="bento__item bento__position">
+                    <NuxtLink :to="{ path: '/', hash: '#contact'}" class="bento__item bento__position">
                         <h3 class="title4 position_text">Full-stack developer & UX enthusiast</h3>
-                    </article>
-                    <NuxtLink :to="{ path: '/', hash: '#contact'}" class="bento__item bento__name" @mouseenter="animate = true" @mouseleave="animate = false">
+                    </NuxtLink>
+                    <div class="bento__item bento__name" @mouseenter="animate = true" @mouseleave="animate = false">
                         <h2 class="title4 name__name">Hello, I am <br/><span class="title2 name_name--strong">ANTOINE MUNERET</span></h2>
                         <CanvasComp class="name__canvas"
                             :animate="animate"
                             :sprite="sprite"
                             :fps="20"
                         />
-                    </NuxtLink>
+                    </div>
                     <article class="bento__item bento__stack">
                         <h3 class="title4 stack__title">My stack</h3>
                         <div class="stack__container">
@@ -140,33 +140,37 @@
             <div class="projects__container">
                 <ProjectComp
                     image-src="/Projects/comixcraft_home.png"
+                    image-link="https://comixcraft.com/"
                     name="Comixcraft"
                     description="Comixcraft is an online comic editor that lets users easily design and share comics on both mobile and desktop devices. It's simple to use, with tools that make the creative process smooth and accessible."
                     :stack="[['nuxt', '/Tech_Logos/nuxt.svg'], ['javascript', '/Tech_Logos/javascript.svg'], ['css', '/Tech_Logos/css.svg'], ['sass', '/Tech_Logos/sass.svg'], ['html', '/Tech_Logos/html.svg'], ['figma', '/Tech_Logos/figma.svg']]"
-                    :links="[['github', '/Tech_Logos/github.svg', 'https://github.com/comixcraft/Editor'], ['website', '/Pictures/world-globe-line-icon.svg', 'https://comixcraft.com/']]"
+                    :links="[['source', '/Tech_Logos/github.svg', 'https://github.com/comixcraft/Editor'], ['website', '/Pictures/world-globe-line-icon.svg', 'https://comixcraft.com/']]"
                     :stack-resource="stackResources"
                 />
                 <ProjectComp
                     image-src="/Projects/mindretreat_home.png"
+                    image-link="https://github.com/AntoinouM/website"
                     name="The mind retreats"
                     description="The mind retreat is an institution based in Bali. It offers retreats for mental well-being, combining holistic therapies, hypnotherapy, and nature immersion to help guests rejuvenate and find inner peace."
                     :stack="[['nuxt', '/Tech_Logos/nuxt.svg'], ['javascript', '/Tech_Logos/javascript.svg'], ['css', '/Tech_Logos/css.svg'], ['sass', '/Tech_Logos/sass.svg'], ['html', '/Tech_Logos/html.svg'], ['figma', '/Tech_Logos/figma.svg']]"
-                    :links="[['github', '/Tech_Logos/github.svg', 'https://github.com/AntoinouM/website'], ['website', '/Pictures/world-globe-line-icon.svg', 'coming soon']]"
+                    :links="[['source', '/Tech_Logos/github.svg', 'https://github.com/AntoinouM/website'], ['website', '/Pictures/world-globe-line-icon.svg', 'coming soon']]"
                     :reverse="true"
                 />
                 <ProjectComp
                     image-src="/Projects/astro_game.png"
+                    image-link="https://github.com/AntoinouM/CrossRealityDev"
                     name="Stranded on Mars"
                     description="'Stranded on Mars' is a 3D video-game. A small astronaut crashes his rocket on an unfamiliar planet. To repair it and get back home, he has to explore the area and gather resources."
                     :stack="[['csharp', '/Tech_Logos/csharp.svg'], ['blender', '/Tech_Logos/blender.svg'], ['unity', '/Tech_Logos/unity.svg']]"
-                    :links="[['github', '/Tech_Logos/github.svg', 'https://github.com/AntoinouM/CrossRealityDev']]"
+                    :links="[['source', '/Tech_Logos/github.svg', 'https://github.com/AntoinouM/CrossRealityDev']]"
                 />
                 <ProjectComp
                     image-src="/Projects/astro_browser.png"
+                    image-link="https://astro-browsergame.netlify.app"
                     name="Elevate!"
                     description="A simple browser game. Some collectibles planets are falling from the sky giving you fuel for your Jetpack. Try to reach the highest you can to make the better score. (not mobile friendly)"
                     :stack="[['javascript', '/Tech_Logos/javascript.svg'], ['html', '/Tech_Logos/html.svg'], ['css', '/Tech_Logos/css.svg'], ['photoshop', '/Tech_Logos/photoshop.svg']]"
-                    :links="[['github', '/Tech_Logos/github.svg', 'https://github.com/AntoinouM/CCL-NavigatorGame'], ['website', '/Pictures/world-globe-line-icon.svg', 'https://astro-browsergame.netlify.app']]"
+                    :links="[['source', '/Tech_Logos/github.svg', 'https://github.com/AntoinouM/CCL-NavigatorGame'], ['website', '/Pictures/world-globe-line-icon.svg', 'https://astro-browsergame.netlify.app']]"
                     :reverse="true"
                 />
             </div>

@@ -2,6 +2,7 @@
 
     const props = defineProps({
         imageSrc: { type: String, required: true },
+        imageLink: { type: String, default: null },
         name: { type: String, required: true },
         description: { type: String, required: true },
         stack: { type: Array, required: true },
@@ -33,6 +34,11 @@
       { threshold: 0.25, }
     );
 
+    function openLink() {
+        if (!props.imageLink) return;
+        window.open(props.imageLink)
+    }
+
     onMounted(() => {
         projectImage.value = new Image();
         projectImage.value.src = props.imageSrc;
@@ -49,7 +55,7 @@
 
     <div ref="project" class="project__container" :class="{reverse: reverse}">
         <div ref="imageContainer" class="project__image grid__child">
-            <img :src="imageSrc" :alt="`${name} project image cover`" :class="{fromRight: reverse}">
+            <img :src="imageSrc" :alt="`${name} project image cover`" :class="{fromRight: reverse}" @click="openLink">
         </div>
         <div class="project__description grid__child">
             <h3 class="title2 description__title">{{ name }}</h3>
@@ -120,6 +126,10 @@
             overflow: hidden;
             padding: $spacer-3 $spacer-4;
             position: relative;
+
+            @include breakpoint-max-width(md) {
+                border-radius: $border-radius-lg;
+            }
         }
     }
 
@@ -150,6 +160,7 @@
             padding: 0 !important;
             position: relative;
             overflow: visible !important;
+            cursor: pointer;
 
             @include breakpoint-max-width(md) {
                 height: $image-height;
@@ -198,6 +209,7 @@
                 @include breakpoint-max-width(md) {
                     height: 100%;
                     width: 100%;
+                    border-radius: $border-radius-lg;
                 }
             }
         }

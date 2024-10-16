@@ -33,6 +33,10 @@
         width: fit-content;
         transition: all .25s ease-in;
 
+        @include breakpoint-max-width(md) {
+            gap: $spacer-2;
+        }
+
         &:hover {
             transform: scale(1.06);
 
@@ -46,6 +50,12 @@
                 width: 30px;
                 height: 30px;
                 filter: invert(1);
+                flex-grow: 1;
+
+                @include breakpoint-max-width(md) {
+                    width: 24px;
+                    height: 24px;
+                }
             }
 
             &__name {
@@ -54,6 +64,7 @@
                 align-items: center;
                 color: $smoke-white;
                 position: relative;
+                flex-grow: 2;
 
                 &::after {
                     display:block;

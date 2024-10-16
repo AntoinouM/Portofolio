@@ -1,6 +1,7 @@
 {
   "name": "antoinemuneret",
   "short_name": "antoinemuneret",
+  "action": {},
   "icons": [
     {
       "src": "/favicon/web-app-manifest-192x192.png",
