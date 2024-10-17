@@ -124,6 +124,10 @@
         @include breakpoint-max-width(md) {
             font-size: 0.85rem;
         }
+
+        @include breakpoint-max-width(xs) {
+            font-size: 0.8rem;
+        }
     }
 
     & .presentation__content {
