@@ -36,6 +36,7 @@
             filter: grayscale(.9);
             -webkit-transition : -webkit-filter 300ms ease-out, transform 300ms ease-out;
             transition: all .3s ease-out;
+            z-index: 1;
 
             &:hover {
                 filter: grayscale(0);
