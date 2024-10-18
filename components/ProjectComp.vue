@@ -174,6 +174,7 @@
                     left: 0;
                     height: $container-height ;
                     width: v-bind(computedImageWidth);
+
                     transform: scaleY(1.05);
 
                     @include breakpoint-max-width(md) {
