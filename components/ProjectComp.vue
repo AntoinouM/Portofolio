@@ -17,9 +17,6 @@
     const computedImageWidth = computed(() => {
         return projectImage.value ? projectImage.value.naturalWidth * (350 / projectImage.value.naturalHeight) + 'px' : null;
     });
-    const computedImagePosition = computed(() => {
-        return imageContainer.value && projectImage.value ? (projectImage.value.naturalWidth * (350 / projectImage.value.naturalHeight) - imageContainer.value.offsetWidth) * -1 + 'px' : null;
-    })
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -55,7 +52,7 @@
 
     <div ref="project" class="project__container" :class="{reverse: reverse}">
         <div ref="imageContainer" class="project__image grid__child">
-            <img :src="imageSrc" :alt="`${name} project image cover`" :class="{fromRight: reverse}" @click="openLink">
+            <img :src="imageSrc" :alt="`${name} project image cover`" :class="{fromRight: reverse, fromLeft: !reverse}" @click="openLink">
         </div>
         <div class="project__description grid__child">
             <h3 class="title2 description__title">{{ name }}</h3>
@@ -151,6 +148,10 @@
         }
     }
 
+    .fromRight { right: 0 !important; }
+
+    .fromLeft { left: 0 !important; }
+
     .project {
 
         $image-height: 160px;
@@ -169,9 +170,6 @@
             &:hover {
 
                 & > img {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
                     height: $container-height ;
                     width: v-bind(computedImageWidth);
 
@@ -184,41 +182,26 @@
                         transform: scaleY(1) !important;
                     }
                 }
-
-                & > img.fromRight {
-                    /* change here for position */
-                    right: 0 !important;
-                    transform: translateX(v-bind(computedImagePosition)) scaleY(1.05);
-
-                    @include breakpoint-max-width(md) {
-                        transform: translateX(0) scaleY(1) !important;
-                    }
-                }
             }
 
             & img {
-                position: relative;
+                position: absolute;
                 height: 100%;
                 width: 100%;
                 object-fit: cover;
                 object-position: left center;
                 border-radius: $border-radius-xl;
                 transition: all .3s ease-out;
-                z-index: 11;
+                z-index: 10;
                 transform-origin: 50% 100%;
-
+                top: 0;
+                
                 @include breakpoint-max-width(md) {
-                    height: 100%;
-                    width: 100%;
                     border-radius: $border-radius-lg;
+                    position: relative;
                 }
             }
         }
-
-            & img.fromRight {
-                transform: translateX(0);
-            }
-
 
         &__description {
             grid-area: description;
