@@ -217,12 +217,10 @@ onMounted(() => {
           name="Elevate! (rework)"
           description="ON GOING PROJECT - I decided to redo an old 2D browser game made with vanilla Javascript. I redeveloped my Elevate! game with React (NextJs) and typescript to make it mobile first."
           :stack="[
-            ['React', '/Tech_Logos/nuxt.svg'],
-            ['javascript', '/Tech_Logos/javascript.svg'],
-            ['css', '/Tech_Logos/css.svg'],
-            ['sass', '/Tech_Logos/sass.svg'],
-            ['html', '/Tech_Logos/html.svg'],
-            ['figma', '/Tech_Logos/figma.svg'],
+            ['React', '/Tech_Logos/react.svg'],
+            ['Next', '/Tech_Logos/next.svg'],
+            ['Typescript', '/Tech_Logos/typescript.svg'],
+            ['Sass', '/Tech_Logos/sass.svg'],
           ]"
           :links="[
             [
@@ -237,6 +235,7 @@ onMounted(() => {
             ],
           ]"
           :stack-resource="stackResources"
+          :reverse="true"
         />
         <ProjectComp
           image-src="/Projects/portofolio.webp"
@@ -264,7 +263,6 @@ onMounted(() => {
             ],
           ]"
           :stack-resource="stackResources"
-          :reverse="true"
         />
         <ProjectComp
           image-src="/Projects/mindretreat_home.png"
@@ -287,6 +285,7 @@ onMounted(() => {
             ],
             ['website', '/Pictures/world-globe-line-icon.svg', 'coming soon'],
           ]"
+          :reverse="true"
         />
         <ProjectComp
           image-src="/Projects/astro_game.png"
@@ -305,7 +304,6 @@ onMounted(() => {
               'https://github.com/AntoinouM/CrossRealityDev',
             ],
           ]"
-          :reverse="true"
         />
         <ProjectComp
           image-src="/Projects/astro_browser.png"
@@ -330,6 +328,7 @@ onMounted(() => {
               'https://astro-browsergame.netlify.app',
             ],
           ]"
+          :reverse="true"
         />
       </div>
     </section>

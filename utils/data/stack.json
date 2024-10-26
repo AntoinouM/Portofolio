@@ -15,13 +15,13 @@
         "src": "/Tech_Logos/blender.svg",
         "description": "Intermediate"
     },
-    "java": {
-        "src": "/Tech_Logos/java.svg",
-        "description": "Beginner"
+    "react": {
+        "src": "/Tech_Logos/react.svg",
+        "description": "Intermediate"
     },
-    "kotlin": {
-        "src": "/Tech_Logos/kotlin.svg",
-        "description": "A bit rusted"
+    "next": {
+        "src": "/Tech_Logos/next.svg",
+        "description": "Intermediate"
     },
     "css": {
         "src": "/Tech_Logos/css.svg",
