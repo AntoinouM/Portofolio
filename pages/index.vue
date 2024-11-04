@@ -164,7 +164,7 @@ onMounted(() => {
                 location="Fachhochschule St. Pölten, Austria"
               />
               <EducationCard
-                title="Technical Degree in Sales"
+                title="Technical Degree in Management"
                 school="Sept. 2009 - June 2011"
                 location="IUT2 Grenoble, France"
               />
