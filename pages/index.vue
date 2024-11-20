@@ -24,8 +24,8 @@ let activePresentationIndex = ref(1);
 const presentation = {
   target: ['For everyone', 'For recruiters', 'For developers'],
   content: [
-    "Hey there! I'm a full-stack developer. I love coding as much as I love climbing so if you don't see me attached to a rope I might be attached to my keyboard.",
-    "I'm a full-stack developer. I understand Component Based Architecture. I have an eye for UI/UX design and Data Visualization. And I am also a kind guy.",
+    "Hey there! I'm a front end developer. I love coding as much as I love climbing so if you don't see me attached to a rope I might be attached to my keyboard.",
+    "I'm a front end developer. I understand Component Based Architecture. I have an eye for UI/UX design and Data Visualization. And I am also a kind guy.",
     'I may not be {highly_technical} yet and while (!Senior) I am a fastLearner and me.openToFeedback(). I build this.site from scratch.init && me.sharpenMySkills() on {projects: other}.',
   ],
 };
@@ -124,7 +124,7 @@ onMounted(() => {
             class="bento__item bento__position"
           >
             <h3 class="title4 position_text">
-              Full-stack developer & UX enthusiast
+              Front-end developer & UX enthusiast
             </h3>
           </NuxtLink>
           <div
@@ -363,7 +363,7 @@ onMounted(() => {
               class="social socials_email"
               src="/Pictures/email.svg"
               name="email"
-              link="mailto:antoine.muneret@hotmail.fr"
+              link="mailto:antoine.muneret2@gmail.com"
             />
           </div>
           <div class="pdf__download" @click="downloadPdf">
