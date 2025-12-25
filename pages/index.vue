@@ -16,7 +16,7 @@ useSeoMeta({
 });
 
 const resourceLoader = new ResourceManager();
-const stackResources = ref(null);
+const stackResources = ref([]);
 const resourcesLoaded = ref(false);
 
 const presentationContent = ref(null);
@@ -61,13 +61,24 @@ function downloadPdf() {
 }
 
 onMounted(() => {
+  const stackKeys = new Set(Object.keys(stack));
+  const techLogoFiles = Object.values(stack)
+    .map((entry) => entry?.src?.split('/')?.pop())
+    .filter(Boolean);
+
   // manage resources
   resourceLoader.addEventListener('end', (e) => {
-    stackResources.value = resourceLoader.getFilteredArray('Tech_Logos');
+    const allTechLogos = resourceLoader.getFilteredArray('Tech_Logos') ?? [];
+    stackResources.value = allTechLogos.filter((r) => stackKeys.has(r.key));
     resourcesLoaded.value = true;
     assignJSONToResources(stack, stackResources.value);
   });
-  resourceLoader.manageResources(['Tech_Logos', 'Pictures', 'Projects']);
+
+  resourceLoader.manageResources([
+    { directory: 'Tech_Logos', listOfElements: techLogoFiles },
+    'Pictures',
+    'Projects',
+  ]);
 });
 </script>
 

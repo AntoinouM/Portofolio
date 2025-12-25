@@ -44,7 +44,7 @@ export default class ResourceManager extends EventTarget {
   // SETTERS
   /** @param {Number} n */
   set totalResources(n) {
-    this._totalResources += n;
+    this._totalResources = n;
   }
 
   /**
@@ -71,7 +71,20 @@ export default class ResourceManager extends EventTarget {
       const promisesOfArrayDir = [];
 
       directories.forEach((dir) => {
-        promisesOfArrayDir.push(this.manageResourcesSingleDir(dir));
+        if (typeof dir === 'string') {
+          promisesOfArrayDir.push(this.manageResourcesSingleDir(dir));
+          return;
+        }
+
+        if (dir && typeof dir === 'object') {
+          const directory = dir.directory ?? dir.dir;
+          const listOfElements = dir.listOfElements ?? dir.list;
+
+          promisesOfArrayDir.push(
+            this.manageResourcesSingleDir(directory, listOfElements)
+          );
+          return;
+        }
       });
 
       Promise.all(promisesOfArrayDir).then(() => {

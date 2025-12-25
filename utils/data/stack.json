@@ -1,10 +1,10 @@
 {
     "javascript": {
-        "src": "/Tech_Logos/js.svg",
+        "src": "/Tech_Logos/javascript.svg",
         "description": "The language I started with"
     },
     "typescript": {
-        "src": "/Tech_Logos/ts.svg",
+        "src": "/Tech_Logos/typescript.svg",
         "description": "Advanced"
     },
     "css": {
