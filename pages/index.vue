@@ -195,6 +195,26 @@ onMounted(() => {
       <h2 class="title2 projects__title">my projects</h2>
       <div class="projects__container">
         <ProjectComp
+          image-src="/Projects/oper.png"
+          image-link="https://www.opercredits.com/"
+          name="Oper Credits"
+          description="Oper Credits is a digital mortgage management platform designed for efficient use on both mobile and desktop. It consists of two synchronized applications: one for borrowers and one for banks or credit institutions."
+          :stack="[
+            ['angular', '/Tech_Logos/angular.svg'],
+            ['typescript', '/Tech_Logos/typescript.svg'],
+            ['sass', '/Tech_Logos/sass.svg'],
+            ['figma', '/Tech_Logos/figma.svg'],
+          ]"
+          :links="[
+            [
+              'website',
+              '/Pictures/world-globe-line-icon.svg',
+              'https://comixcraft.com/',
+            ],
+          ]"
+          :stack-resource="stackResources"
+        />
+        <ProjectComp
           image-src="/Projects/comixcraft_home.png"
           image-link="https://comixcraft.com/"
           name="Comixcraft"
