@@ -114,7 +114,7 @@
     opacity: 0.6;
     color: $smoke-white;
 
-    &:hover {
+    &:hover:not(.active) {
       cursor: pointer;
       color: $lapis-blue;
       opacity: 1;

@@ -213,6 +213,7 @@ onMounted(() => {
             ],
           ]"
           :stack-resource="stackResources"
+          :reverse="true"
         />
         <ProjectComp
           image-src="/Projects/comixcraft_home.png"
