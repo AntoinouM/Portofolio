@@ -259,11 +259,6 @@ onMounted(() => {
               '/Tech_Logos/github.svg',
               'https://github.com/AntoinouM/elevate',
             ],
-            [
-              'website',
-              '/Pictures/world-globe-line-icon.svg',
-              'https://test-elevate.netlify.app/',
-            ],
           ]"
           :stack-resource="stackResources"
           :reverse="true"
@@ -356,7 +351,7 @@ onMounted(() => {
             [
               'website',
               '/Pictures/world-globe-line-icon.svg',
-              'https://astro-browsergame.netlify.app',
+              'https://effulgent-snickerdoodle-5147af.netlify.app/',
             ],
           ]"
           :reverse="true"
