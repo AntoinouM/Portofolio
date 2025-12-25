@@ -1,505 +1,501 @@
 .spinner {
-    width: 100%;
-    height: 80vh;
-    height: 80dvh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  width: 100%;
+  height: 80vh;
+  height: 80dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .bento {
+  display: flex;
+  justify-content: center;
+  align-items: start;
 
-    display: flex;
-    justify-content: center;
-    align-items: start;
+  @include breakpoint-max-width(lg) {
+    height: 95dvh !important;
+    align-items: center;
+  }
 
-    @include breakpoint-max-width(lg) {
-        height: 95dvh !important;
-        align-items: center;
-    }
-
-    &__container {
-        width: 80%;
-        max-width: $max-width;
-        height: 90%;
-
-        @include breakpoint-max-width(lg) {
-            height: 85%;
-        }
-
-        @include breakpoint-max-width(md) {
-            width: 95%;
-        }
-    }
-
-    &__grid {
-        width: 100%;
-        height: 100%;
-
-        /* grid */
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 1fr 1.5fr .5fr 1fr .5fr repeat(3, 1fr);
-        grid-column-gap: $spacer-3;
-        grid-row-gap: $spacer-2;
-
-        grid-template-areas: 
-            "presentation presentation picture"
-            "presentation presentation picture"
-            "position name picture"
-            "position name quote"
-            "stack name quote"
-            "stack education education"
-            "stack education education"
-            "stack education education";
-
-        @include breakpoint-max-width(xl) {
-            grid-template-rows: 1fr 1.5fr .5fr 1fr .5fr repeat(2, 1fr) 1.5fr;
-        }
-
-        @include breakpoint-max-width(lg) {
-
-            grid-template-rows: 1fr 0.5fr 1fr .5fr 1.5fr;
-            grid-template-columns: repeat(2, 1fr);
-            row-gap: $spacer-4;
-            grid-template-areas: 
-                "presentation  presentation"
-                "quote picture"
-                "name name"
-                "position stack"
-                "education stack";
-        }
-
-        @include breakpoint-max-width(md) {
-            display: flex;
-            flex-direction: column;
-            gap: $spacer-3;
-        }
-    }
-
-    &__item {
-        background-color: $grey-90;
-        border-radius: $border-radius-xl;
-        padding: $spacer-2 $spacer-3;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-        overflow: hidden;
-        place-self: stretch stretch;
-
-        @include breakpoint-max-width(md) {
-            height: fit-content !important;
-            border-radius: $border-radius-lg;
-        }
-    }
-}
-
-.bento__presentation {
-    grid-area: presentation;
-    display: flex;
-    gap: $spacer-3;
-    flex-direction: column;
-    justify-content: start;
-    padding: $spacer-3 $spacer-4;
-
-    & .presentation__targets {
-        display: flex;
-        gap: $spacer-3;
-    }
-
-    & .presentation__target {
-        text-transform: uppercase;
-        font-size: 1rem;
-        font-weight: normal;
-        opacity: .6;
-        color: $smoke-white;
-
-        &:hover {
-            cursor: pointer;
-            color: $lapis-blue;
-            opacity: 1;
-        }
-
-        @include breakpoint-max-width(md) {
-            font-size: 0.85rem;
-        }
-
-        @include breakpoint-max-width(xs) {
-            font-size: 0.8rem;
-        }
-    }
-
-    & .presentation__content {
-        font-size: 1rem;
-        text-align: justify;
-        flex-grow: 4;
-        display: flex;
-        align-items: center;
-
-        @include breakpoint-max-width(md) {
-            text-align: left !important;
-        }
-    }
-
-    & .active {
-        opacity: 1 !important;
-        font-weight: bold !important;
-    }
-}
-
-.bento__picture {
-    grid-area: picture;
-    padding: 0;
-    position: relative;
-    overflow: visible;
-    display: block;
-    height: auto !important;
-
-    background-image: url('/Pictures/climbing.webp');
-    background-size: cover;
-    background-position: 50% 50%;
+  &__container {
+    width: 80%;
+    max-width: $max-width;
+    height: 90%;
 
     @include breakpoint-max-width(lg) {
-        height: 200px !important;
+      height: 85%;
     }
 
     @include breakpoint-max-width(md) {
-        display: none;
+      width: 95%;
+    }
+  }
+
+  &__grid {
+    width: 100%;
+    height: 100%;
+
+    /* grid */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1.5fr 0.5fr 1fr 0.5fr repeat(3, 1fr);
+    grid-column-gap: $spacer-3;
+    grid-row-gap: $spacer-2;
+
+    grid-template-areas:
+      'presentation presentation picture'
+      'presentation presentation picture'
+      'position name picture'
+      'position name quote'
+      'stack name quote'
+      'stack education education'
+      'stack education education'
+      'stack education education';
+
+    @include breakpoint-max-width(xl) {
+      grid-template-rows: 1fr 1.5fr 0.5fr 1fr 0.5fr repeat(2, 1fr) 1.5fr;
     }
 
-    & .picture__svg {
-        position: absolute;
-        width: 50%;
-        height: 80px;
-        z-index: 10;
-        transform: scaleX(-1) rotate(-90deg);
-        right: -25%;
-        top: 40%;
-        opacity: 0;
-        transition: all .3s ease-in;
-        display: block;
-
-        @include breakpoint-max-width(lg) {
-            display: none;
-        }
+    @include breakpoint-max-width(lg) {
+      grid-template-rows: 1fr 0.5fr 1fr 0.5fr 1.5fr;
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: $spacer-4;
+      grid-template-areas:
+        'presentation  presentation'
+        'quote picture'
+        'name name'
+        'position stack'
+        'education stack';
     }
 
-    & .picture__path {
-        stroke: $electric-blue;
-        stroke-width: 1.5;
-        fill: none;
+    @include breakpoint-max-width(md) {
+      display: flex;
+      flex-direction: column;
+      gap: $spacer-3;
+    }
+  }
+
+  &__item {
+    background-color: $grey-90;
+    border-radius: $border-radius-xl;
+    padding: $spacer-2 $spacer-3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    place-self: stretch stretch;
+
+    @include breakpoint-max-width(md) {
+      height: fit-content !important;
+      border-radius: $border-radius-lg;
+    }
+  }
+}
+
+.bento__presentation {
+  grid-area: presentation;
+  display: flex;
+  gap: $spacer-3;
+  flex-direction: column;
+  justify-content: start;
+  padding: $spacer-3 $spacer-4;
+
+  & .presentation__targets {
+    display: flex;
+    gap: $spacer-3;
+  }
+
+  & .presentation__target {
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: normal;
+    opacity: 0.6;
+    color: $smoke-white;
+
+    &:hover {
+      cursor: pointer;
+      color: $lapis-blue;
+      opacity: 1;
     }
 
-    &::after {
-        content: 'me';
-        color: $electric-blue;
-        font-size: 2rem;
-        font-family: 'Bradley Hand', cursive;
-        display: block;
-        position: absolute;
-        z-index: 11;
-        width: fit-content;
-        height: fit-content;
-        top: 20%;
-        right: -60px;
-        transform: rotate(15deg);
-        opacity: 0;
-        transition: all .3s ease-in;
-
-        @include breakpoint-max-width(lg) {
-            display: none;
-        }
+    @include breakpoint-max-width(md) {
+      font-size: 0.85rem;
     }
+
+    @include breakpoint-max-width(xs) {
+      font-size: 0.8rem;
+    }
+  }
+
+  & .presentation__content {
+    font-size: 1rem;
+    text-align: justify;
+    flex-grow: 4;
+    display: flex;
+    align-items: center;
+
+    @include breakpoint-max-width(md) {
+      text-align: left !important;
+    }
+  }
+
+  & .active {
+    opacity: 1 !important;
+    font-weight: bold !important;
+  }
+}
+
+.bento__picture {
+  grid-area: picture;
+  padding: 0;
+  position: relative;
+  overflow: visible;
+  display: block;
+  height: auto !important;
+
+  background-image: url('/Pictures/climbing.webp');
+  background-size: cover;
+  background-position: 50% 50%;
+
+  @include breakpoint-max-width(lg) {
+    height: 200px !important;
+  }
+
+  @include breakpoint-max-width(md) {
+    display: none;
+  }
+
+  & .picture__svg {
+    position: absolute;
+    width: 50%;
+    height: 80px;
+    z-index: 10;
+    transform: scaleX(-1) rotate(-90deg);
+    right: -25%;
+    top: 40%;
+    opacity: 0;
+    transition: all 0.3s ease-in;
+    display: block;
+
+    @include breakpoint-max-width(lg) {
+      display: none;
+    }
+  }
+
+  & .picture__path {
+    stroke: $electric-blue;
+    stroke-width: 1.5;
+    fill: none;
+  }
+
+  &::after {
+    content: 'me';
+    color: $electric-blue;
+    font-size: 2rem;
+    font-family: 'Bradley Hand', cursive;
+    display: block;
+    position: absolute;
+    z-index: 11;
+    width: fit-content;
+    height: fit-content;
+    top: 20%;
+    right: -60px;
+    transform: rotate(15deg);
+    opacity: 0;
+    transition: all 0.3s ease-in;
+
+    @include breakpoint-max-width(lg) {
+      display: none;
+    }
+  }
 }
 
 .bento__picture:hover > .picture__svg,
 .bento__picture:hover::after {
-    opacity: 1; 
-    transition: all 0.3s ease-in;
+  opacity: 1;
+  transition: all 0.3s ease-in;
 }
 
 .bento__quote {
-    grid-area: quote;
-    background-color: $lapis-blue;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  grid-area: quote;
+  background-color: $lapis-blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    @include breakpoint-max-width(md) {
-        display: none;
-    }
+  @include breakpoint-max-width(md) {
+    display: none;
+  }
 }
 
 .bento__position {
-    grid-area: position;
-    background-color: $lapis-blue;
-    color: $smoke-white;
+  grid-area: position;
+  background-color: $lapis-blue;
+  color: $smoke-white;
 
-    @include breakpoint-max-width(md) {
-        padding: $spacer-3;
-    }
+  @include breakpoint-max-width(md) {
+    padding: $spacer-3;
+  }
 }
 
 .bento__name {
-    grid-area: name;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    gap: $spacer-1;
-    color: $smoke-white;
+  grid-area: name;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: $spacer-1;
+  color: $smoke-white;
 
-    & .name__name{
-        width: 80%;
+  & .name__name {
+    width: 80%;
 
-        & .name_name--strong {
-            font-weight: bold;
-        }    
+    & .name_name--strong {
+      font-weight: bold;
     }
+  }
 
-    & .name__canvas {
-        width: 70px;
-        height: 140px;
-        transform: scaleX(-1);
+  & .name__canvas {
+    width: 70px;
+    height: 140px;
+    transform: scaleX(-1);
 
-        @include breakpoint-max-width(lg) {
-            width: 50px;
-            height: 100px;
-        }
+    @include breakpoint-max-width(lg) {
+      width: 50px;
+      height: 100px;
     }
+  }
 
-    & .name__image {
-        height: 70px;
-        width: auto;
-        transform: scaleX(-1);
-    }
+  & .name__image {
+    height: 70px;
+    width: auto;
+    transform: scaleX(-1);
+  }
 }
 
 .bento__stack {
-    grid-area: stack;
+  grid-area: stack;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    overflow: visible;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: visible;
+  z-index: 2;
 
-    & .stack {
-        &__container{
-            display: flex;
-            justify-content: center;
-            align-content: center;
-            gap: $spacer-3;
-            flex-wrap: wrap;
-            width: 100%;
-            height: auto;
-            flex-grow: 1;
-        }
+  & .stack {
+    &__container {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      gap: $spacer-3;
+      flex-wrap: wrap;
+      width: 100%;
+      height: auto;
+      flex-grow: 1;
     }
+  }
 }
 
 .bento__education {
+  grid-area: education;
+  display: flex;
+  flex-direction: row;
+  gap: $spacer-2;
+  justify-content: space-between;
+  align-items: end;
+  padding: $spacer-3 $spacer-4;
+  z-index: 1;
 
-    grid-area: education;
+  & .education__container {
     display: flex;
-    flex-direction: row;
-    gap: $spacer-2;
+    flex-direction: column;
+    height: 100%;
+    flex-grow: 6;
     justify-content: space-between;
-    align-items: end;
-    padding: $spacer-3 $spacer-4;
 
-    & .education__container {
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-        flex-grow: 6;
-        justify-content: space-between;
+    & .education__title {
+      text-transform: uppercase;
+      font-size: 1rem;
+      font-weight: normal;
+      text-align: left;
+    }
+  }
 
-        & .education__title {
-            text-transform: uppercase;
-            font-size: 1rem;
-            font-weight: normal;
-            text-align: left;
-        }
+  & .education__projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: $spacer-1;
+    width: fit-content;
+    transition: all 0.3s ease-in-out;
+
+    @include breakpoint-max-width(lg) {
+      width: 80px;
+      height: 80px;
     }
 
-    & .education__projects {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: $spacer-1;
-        width: fit-content;
-        transition: all .3s ease-in-out;
-
-        @include breakpoint-max-width(lg) {
-            width: 80px;
-            height: 80px;
-        }
-
-        & .projects__text {
-            text-transform: uppercase;
-            font-size: .8rem;
-            font-weight: lighter;
-            transition: all .3s ease-in-out;
-            color: $smoke-white;
-        }
-
-        & .projects__buffer {
-            width: 100%;
-            height: 0;
-            transition: all .3s ease-in-out;
-        }
-
-        & .projects__arrow {
-            background-image: url('/Pictures/down-arrow.svg');
-            background-position: center 45%;
-            background-size: 110%;
-            border: 2px solid $smoke-white;
-            border-radius: 50%;
-            width: 60px;
-            height: 60px;
-            transition: all .3s ease-in-out;
-            -webkit-transition : -webkit-filter 300ms ease-in-out;
-
-            @include breakpoint-max-width(lg) {
-                width: 45px;
-                height: 45px;
-            }
-        }
+    & .projects__text {
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      font-weight: lighter;
+      transition: all 0.3s ease-in-out;
+      color: $smoke-white;
     }
-}
-
-.education__projects:hover {
-
-    cursor: pointer;
 
     & .projects__buffer {
-        height: $spacer-1;
+      width: 100%;
+      height: 0;
+      transition: all 0.3s ease-in-out;
     }
 
     & .projects__arrow {
-        filter: invert(1);
+      background-image: url('/Pictures/down-arrow.svg');
+      background-position: center 45%;
+      background-size: 110%;
+      border: 2px solid $smoke-white;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      transition: all 0.3s ease-in-out;
+      -webkit-transition: -webkit-filter 300ms ease-in-out;
+
+      @include breakpoint-max-width(lg) {
+        width: 45px;
+        height: 45px;
+      }
     }
+  }
 }
 
+.education__projects:hover {
+  cursor: pointer;
+
+  & .projects__buffer {
+    height: $spacer-1;
+  }
+
+  & .projects__arrow {
+    filter: invert(1);
+  }
+}
 
 .stack__title {
-    margin-bottom: $spacer-3;
+  margin-bottom: $spacer-3;
 
-    @include breakpoint-max-width(xl) {
-        margin-bottom: $spacer-2;
-    }
+  @include breakpoint-max-width(xl) {
+    margin-bottom: $spacer-2;
+  }
 }
 
 /* ANIMATION */
 .bento {
+  &__presentation {
+    /* xl: left to right */
+    /* lg: left to right */
+    /* md: left to right */
+    transform: translateX(-70px);
+    animation-delay: 0.1s !important;
+  }
 
-    &__presentation { 
-        /* xl: left to right */
-        /* lg: left to right */
-        /* md: left to right */
-        transform: translateX(-70px);
-        animation-delay: .1s !important;
+  &__picture {
+    /* xl: top to bottom */
+    /* lg: right to left */
+    /* md: not displayed */
+    transform: translateY(-60px);
+    animation-delay: 0.25s !important;
+
+    @include breakpoint-max-width(lg) {
+      transform: translateX(70px) translateY(0);
+    }
+  }
+
+  &__quote {
+    /* xl: top to bottom */
+    /* lg: left to right */
+    /* md: not displayed */
+    transform: translateX(90px);
+    animation-delay: 0.4s !important;
+    animation-duration: 0.6s !important;
+
+    @include breakpoint-max-width(lg) {
+      transform: translateX(-70px) translateY(0);
+    }
+  }
+
+  &__education {
+    /* xl: right to left */
+    /* lg: left to right */
+    /* md: left to right */
+    transform: translateX(70px);
+    animation-delay: 0.4s !important;
+
+    @include breakpoint-max-width(lg) {
+      transform: translateX(-70px);
+      animation-delay: 0.55s !important;
     }
 
-    &__picture { 
-        /* xl: top to bottom */
-        /* lg: right to left */
-        /* md: not displayed */
-        transform: translateY(-60px);
-        animation-delay: .25s !important;
+    @include breakpoint-max-width(md) {
+      transform: translateX(0) translateY(60px);
+      animation-delay: 0.55s !important;
+    }
+  }
 
-        @include breakpoint-max-width(lg) {
-            transform: translateX(70px) translateY(0);
-        }
+  &__stack {
+    /* xl: bottom  to top */
+    /* lg: right to left */
+    /* md: right to left */
+    transform: translateY(60px);
+    animation-delay: 0.55s !important;
+
+    @include breakpoint-max-width(lg) {
+      transform: translateX(70px) translateY(0);
+      animation-delay: 0.4s !important;
     }
 
-    &__quote { 
-        /* xl: top to bottom */
-        /* lg: left to right */
-        /* md: not displayed */
-        transform: translateX(90px);        
-        animation-delay: .4s !important;
-        animation-duration: .6s !important;
+    @include breakpoint-max-width(md) {
+      transform: translateY(80px);
+      animation-delay: 0.4s !important;
+    }
+  }
 
-        @include breakpoint-max-width(lg) {
-            transform: translateX(-70px) translateY(0);
-        }
+  &__position {
+    /* xl: bottom  to top */
+    /* lg: left to right */
+    /* md: left to right */
+    transform: translateX(-90px);
+    animation-delay: 0.4s !important;
+    animation-duration: 0.6s !important;
+
+    @include breakpoint-max-width(lg) {
+      transform: translateX(-70px) translateY(0);
     }
 
-    &__education { 
-        /* xl: right to left */
-        /* lg: left to right */
-        /* md: left to right */
-        transform: translateX(70px);
-        animation-delay: .40s !important;
-
-        @include breakpoint-max-width(lg) {
-            transform: translateX(-70px);
-            animation-delay: .55s !important;
-        }
-
-        @include breakpoint-max-width(md) {
-            transform: translateX(0) translateY(60px);
-            animation-delay: .55s !important;
-        }
+    @include breakpoint-max-width(md) {
+      transform: translateX(70px);
+      animation-delay: 0.25s !important;
     }
-
-    &__stack {  
-        /* xl: bottom  to top */
-        /* lg: right to left */
-        /* md: right to left */
-        transform: translateY(60px);
-        animation-delay: .55s !important;
-
-        @include breakpoint-max-width(lg) {
-            transform: translateX(70px) translateY(0);
-            animation-delay: .40s !important;
-        }
-
-        @include breakpoint-max-width(md) {
-            transform: translateY(80px);
-            animation-delay: .40s !important;
-        }
-    }
-
-    &__position { 
-        /* xl: bottom  to top */
-        /* lg: left to right */
-        /* md: left to right */
-        transform: translateX(-90px);
-        animation-delay: .4s !important;
-        animation-duration: .6s !important;
-
-        @include breakpoint-max-width(lg) {
-            transform: translateX(-70px) translateY(0);
-        }
-
-        @include breakpoint-max-width(md) {
-            transform: translateX(70px);
-            animation-delay: .25s !important;
-        }
-    }
+  }
 }
 
 .bento {
-
-    &__presentation,
-    &__picture ,
-    &__quote,
-    &__education ,
-    &__stack,
-    &__position { /* reset transform via animation */
-        opacity: 0;
-        animation: .3s ease-out forwards slideIn;
-    }
+  &__presentation,
+  &__picture,
+  &__quote,
+  &__education,
+  &__stack,
+  &__position {
+    /* reset transform via animation */
+    opacity: 0;
+    animation: 0.3s ease-out forwards slideIn;
+  }
 }
 
 @keyframes slideIn {
-    to {
-        transform: translate(0);
-        opacity: 1;
-    }
+  to {
+    transform: translate(0);
+    opacity: 1;
+  }
 }

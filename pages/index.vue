@@ -65,7 +65,6 @@ onMounted(() => {
   resourceLoader.addEventListener('end', (e) => {
     stackResources.value = resourceLoader.getFilteredArray('Tech_Logos');
     resourcesLoaded.value = true;
-    console.log(e.detail.message);
     assignJSONToResources(stack, stackResources.value);
   });
   resourceLoader.manageResources(['Tech_Logos', 'Pictures', 'Projects']);

@@ -68,12 +68,12 @@ const props = defineProps({
     background-color: $grey-90;
     transition: all 0.3s ease-in;
     filter: drop-shadow(5px 5px 10px #000000);
+    z-index: 999;
   }
 
   &__logo:hover + .stackItem__tooltip {
     display: block;
     opacity: 1;
-    z-index: 10;
   }
 }
 

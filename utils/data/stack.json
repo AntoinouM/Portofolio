@@ -1,27 +1,11 @@
 {
     "javascript": {
         "src": "/Tech_Logos/js.svg",
-        "description": "The language I used the most"
+        "description": "The language I started with"
     },
     "typescript": {
         "src": "/Tech_Logos/ts.svg",
-        "description": "Starting out"
-    },
-    "csharp": {
-        "src": "/Tech_Logos/c.svg",
-        "description": "A bit rusted"
-    },
-    "blender": {
-        "src": "/Tech_Logos/blender.svg",
-        "description": "Intermediate"
-    },
-    "react": {
-        "src": "/Tech_Logos/react.svg",
-        "description": "Intermediate"
-    },
-    "next": {
-        "src": "/Tech_Logos/next.svg",
-        "description": "Intermediate"
+        "description": "Advanced"
     },
     "css": {
         "src": "/Tech_Logos/css.svg",
@@ -45,23 +29,19 @@
     },
     "vue": {
         "src": "/Tech_Logos/vue.svg",
-        "description": "My preferred framework"
+        "description": "My first framework"
     },
     "nuxt": {
         "src": "/Tech_Logos/nuxt.svg",
-        "description": "Advanced"
+        "description": "A bit rusted"
     },
     "node": {
         "src": "/Tech_Logos/node.svg",
         "description": "The basics covered"
     },
-    "express": {
-        "src": "/Tech_Logos/express.svg",
-        "description": "Intermediate"
-    },
     "angular": {
         "src": "/Tech_Logos/angular.svg",
-        "description": "Doing the first projects"
+        "description": "Advanced"
     },
     "figma": {
         "src": "/Tech_Logos/figma.svg",
@@ -70,13 +50,5 @@
     "github": {
         "src": "/Tech_Logos/github.svg",
         "description": "Regular handling"
-    },
-    "unity": {
-        "src": "/Tech_Logos/unity.svg",
-        "description": "Beginner"
-    },
-    "photoshop": {
-        "src": "/Tech_Logos/photoshop.svg",
-        "description": "Intermediate"
     }
 }
