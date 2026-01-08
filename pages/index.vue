@@ -209,7 +209,7 @@ onMounted(() => {
             [
               'website',
               '/Pictures/world-globe-line-icon.svg',
-              'https://comixcraft.com/',
+              'https://www.opercredits.com/',
             ],
           ]"
           :stack-resource="stackResources"
@@ -285,7 +285,7 @@ onMounted(() => {
             [
               'website',
               '/Pictures/world-globe-line-icon.svg',
-              'https://antoinemuneret.dev/',
+              'https://antoinemuneret.com/',
             ],
           ]"
           :stack-resource="stackResources"
