@@ -333,7 +333,7 @@ onMounted(() => {
         />
         <ProjectComp
           image-src="/Projects/astro_browser.png"
-          image-link="https://astro-browsergame.netlify.app"
+          image-link="https://effulgent-snickerdoodle-5147af.netlify.app/"
           name="Elevate!"
           description="A simple browser game. Some collectibles planets are falling from the sky giving you fuel for your Jetpack. Try to reach the highest you can to make the better score. (not mobile friendly)"
           :stack="[
